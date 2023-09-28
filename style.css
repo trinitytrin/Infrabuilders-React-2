@@ -763,7 +763,7 @@ label {
 }
 
 .slider-style-1.banner-infra {
-    background: rgba(0, 0, 0, 0) url("img/infra-demo/slider-11.jpg") repeat scroll center center / cover;
+    background: rgba(0, 0, 0, 0) url("./public/img/infra-demo/slider-11.jpg") repeat scroll center center / cover;
 }
 
 
