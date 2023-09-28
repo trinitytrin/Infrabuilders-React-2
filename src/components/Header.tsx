@@ -62,10 +62,10 @@ const Header = () => {
               <div className="col-sm-12">
                 <nav className="xboot-mobile-menu">
                   <ul>
-                    <li><Link to={'/'} className="nav-link">Home</Link></li>
-                    <li><Link to={'/about'} className="nav-link">About</Link></li>
+                    <li><Link to={'/'} >Home</Link></li>
+                    <li><Link to={'/about'} >About</Link></li>
 
-                    <li><Link to={'/services'} className="nav-link">Services</Link>
+                    <li><Link to={'/services'} >Services</Link>
                       <ul>
                         <li><a href="infra-design.html">Design </a>
                           <ul>
@@ -83,9 +83,9 @@ const Header = () => {
                       </ul>
                     </li>
 
-                    <li><Link to={'/projects'} className="nav-link">Projects</Link></li>
-                    <li><Link to={'/download'} className="nav-link">Download</Link></li>
-                    <li><Link to={'/contact'} className="nav-link">Contact</Link></li>
+                    <li><Link to={'/projects'} >Projects</Link></li>
+                    <li><Link to={'/download'} >Download</Link></li>
+                    <li><Link to={'/contact'} >Contact</Link></li>
 
                   </ul>
                 </nav>
