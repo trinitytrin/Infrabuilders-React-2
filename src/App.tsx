@@ -1,5 +1,5 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
@@ -7,7 +7,7 @@ import Loader from './components/Loader';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import About from './pages/About';
-import { servicesCategory } from './data/services-category';
+//import { servicesCategory } from './data/services-category';
 import Services from './pages/Services';
 import Design from './pages/Design';
 import Projects from './pages/Projects';
