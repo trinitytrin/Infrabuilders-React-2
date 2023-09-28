@@ -3246,16 +3246,16 @@ blockquote {
 }
 
 .leaflet-container {
-    width: 60%;
-    height: 40%;
+    width: 85%;
+    height: 60vh;
     z-index: 1;
     justify-self: center;
     border: solid 2px black;
     position: relative;
-    left: 15%;
+    left: 10%;
     right: 10%;
-    margin: -25px 0 0 -25px;
-    /* display: inline-block; */
+    /* margin: -25px 0 0 -25px; */
+    display: inline-block;
 }
 
 .map-popup-style {

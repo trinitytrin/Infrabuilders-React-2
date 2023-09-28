@@ -3244,8 +3244,3 @@ blockquote {
 .scroll-btn:hover {
     color: #555;
 }
-
-.leaflet-container {
-    width: 80%;
-    height: 100vh;
-}

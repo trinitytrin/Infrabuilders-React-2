@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Header = () => {
@@ -9,7 +10,7 @@ const Header = () => {
           <div className="row">
             <div className="col-md-2  col-sm-2 col-xs-3">
               <div className="logo">
-                <a href="index.html"><img src='img/logo/1.png' alt="logo" /></a>
+                <Link to={'/'} className="nav-link"><img src='img/logo/1.png' alt="logo" /></Link>
               </div>
             </div>
             <div className="col-md-10 col-sm-10 hidden-xs hidden-sm">
@@ -21,13 +22,13 @@ const Header = () => {
                 </button>
                 <nav className="toggle-menu-section">
                   <ul className="main-menu clearfix hover-style-one">
-                    <li><a href="index.html"><i className="fa fa-2x fa-home"></i></a> </li>
+                    <li><Link to={'/'} className="nav-link"><i className="fa fa-2x fa-home"></i></Link> </li>
 
-                    <li><a href="about-me.html">About</a></li>
+                    <li><Link to={'/about'} className="nav-link">About</Link></li>
 
-                    <li><a href="infra-services.html">Services <span><i className="fa fa-angle-down"></i></span></a>
+                    <li><Link to={'/services'} className="nav-link">Services <span><i className="fa fa-angle-down"></i></span></Link>
                       <ul>
-                        <li><a href="infra-design.html">Design <span><i className="fa fa-angle-down"></i></span></a>
+                        <li><Link to={'/services/design'} className="nav-link">Design <span><i className="fa fa-angle-down"></i></span></Link>
                           <ul>
                             <li><a href="infra-architecturalDesign.html">Architectural </a></li>
                             <li><a href="infra-engineeringDesign.html">Engineering </a></li>
@@ -45,9 +46,9 @@ const Header = () => {
                       </ul>
                     </li>
 
-                    <li><a href="infra-projects.html">Projects</a></li>
-                    <li><a href="infra-contact.html">Download</a></li>
-                    <li><a href="infra-contact.html">Contact</a></li>
+                    <li><Link to={'/projects'} className="nav-link">Projects</Link></li>
+                    <li><Link to={'/download'} className="nav-link">Download</Link></li>
+                    <li><Link to={'/contact'} className="nav-link">Contact</Link></li>
                   </ul>
                 </nav>
               </div>
@@ -61,10 +62,10 @@ const Header = () => {
               <div className="col-sm-12">
                 <nav className="xboot-mobile-menu">
                   <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about-me.html">About</a></li>
+                    <li><Link to={'/'} className="nav-link">Home</Link></li>
+                    <li><Link to={'/about'} className="nav-link">About</Link></li>
 
-                    <li><a href="infra-services.html">Services</a>
+                    <li><Link to={'/services'} className="nav-link">Services</Link>
                       <ul>
                         <li><a href="infra-design.html">Design </a>
                           <ul>
@@ -82,9 +83,9 @@ const Header = () => {
                       </ul>
                     </li>
 
-                    <li><a href="infra-projects.html">Projects</a></li>
-                    <li><a href="infra-contact.html">Download</a></li>
-                    <li><a href="infra-contact.html">Contact</a></li>
+                    <li><Link to={'/projects'} className="nav-link">Projects</Link></li>
+                    <li><Link to={'/download'} className="nav-link">Download</Link></li>
+                    <li><Link to={'/contact'} className="nav-link">Contact</Link></li>
 
                   </ul>
                 </nav>
