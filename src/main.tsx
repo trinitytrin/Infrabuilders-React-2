@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import '../style.css';
-import { RouterProvider, BrowserRouter } from "react-router-dom";
-import router from './routing/router';
+import { BrowserRouter } from "react-router-dom";
+//import router from './routing/router';
 import App from './App';
 
 
