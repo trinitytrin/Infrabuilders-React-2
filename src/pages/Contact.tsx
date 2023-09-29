@@ -1,21 +1,20 @@
-import { HelmetProvider, Helmet } from "react-helmet-async";
+
 import BreadCrumb from "../components/BreadCrumb";
 import ContactForm from "../components/ContactForm";
 import ContactInfoWidget from "../components/ContactInfoWidget";
 import ContactMap from "../components/ContactMap";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import Loader from "../components/Loader";
 
 
 const Contact = () => {
     return (
-        <HelmetProvider>
-            <>
-                <Helmet>
+        <>
+            <Loader />
+            <div className="wrapper">
 
-                    <script src="js/ajax-mail.js"></script>
-
-                </Helmet>
-
-
+                <Header />
 
                 <div className="content">
                     <BreadCrumb />
@@ -44,8 +43,10 @@ const Contact = () => {
 
                 </div>
 
-            </>
-        </HelmetProvider>
+                <Footer />
+            </div>
+        </>
+
     )
 }
 
