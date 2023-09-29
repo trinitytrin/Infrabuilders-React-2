@@ -79,6 +79,7 @@ function App() {
         <script src='/js/modernizr-2.8.3.min.js' async></script>
         <script src='/js/plugins.js' type="module" defer></script>
         <script src='/js/main.js' type="text/javascript" async></script>
+        <script src="js/ajax-mail.js"></script>
 
       </Helmet >
 

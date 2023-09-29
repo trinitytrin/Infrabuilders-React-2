@@ -1,1 +1,0 @@
-export const servicesCategory = ['design', 'implementations-and-Supply', 'maintenance', 'products', 'solutions'];

@@ -1,8 +1,12 @@
+import BreadCrumb from "../components/BreadCrumb";
 
 
 const Services = () => {
     return (
-        <div>Services Landing Page </div>
+        <div className="content">
+            <BreadCrumb />
+            <h3>Services page element goes here</h3>
+        </div>
     )
 }
 
