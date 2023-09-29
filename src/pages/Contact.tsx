@@ -3,13 +3,13 @@ import BreadCrumb from "../components/BreadCrumb";
 import ContactForm from "../components/ContactForm";
 import ContactInfoWidget from "../components/ContactInfoWidget";
 import ContactMap from "../components/ContactMap";
+import useDocumentTitle from "../hooks/useDocumentTitle";
 
 
 
 const Contact = () => {
+    useDocumentTitle('Contact');
     return (
-
-
         <div className="content">
             <BreadCrumb />
             <div className="xboot-standard-row contact-section contact-style-2">
