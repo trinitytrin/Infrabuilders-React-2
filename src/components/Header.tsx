@@ -1,5 +1,5 @@
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 const Header = () => {
@@ -63,7 +63,7 @@ const Header = () => {
                 <div className="col-sm-12">
                   <nav className="xboot-mobile-menu">
                     <ul>
-                      <li><Link to={'/'} >Home</Link></li>
+                      <li><a href="/">Home</a></li>
                       <li><Link to={'about'} >About</Link></li>
 
                       <li><Link to={'/services'} >Services</Link>
@@ -86,7 +86,7 @@ const Header = () => {
 
                       <li><Link to={'/projects'} >Projects</Link></li>
                       <li><Link to={'/download'} >Download</Link></li>
-                      <li><NavLink to={'/contact'} >Contact</NavLink></li>
+                      <li><a href="/contact">Contact</a></li>
 
                     </ul>
                   </nav>
