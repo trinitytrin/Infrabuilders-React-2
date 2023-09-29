@@ -24,7 +24,7 @@ const Header = () => {
                   <ul className="main-menu clearfix hover-style-one">
                     <li><Link to={'/'} className="nav-link"><i className="fa fa-2x fa-home"></i></Link> </li>
 
-                    <li><Link to={'/about'} className="nav-link">About</Link></li>
+                    <li><Link to={'about'} className="nav-link">About</Link></li>
 
                     <li><Link to={'/services'} className="nav-link">Services <span><i className="fa fa-angle-down"></i></span></Link>
                       <ul>
@@ -48,7 +48,7 @@ const Header = () => {
 
                     <li><Link to={'/projects'} className="nav-link">Projects</Link></li>
                     <li><Link to={'/download'} className="nav-link">Download</Link></li>
-                    <li><Link to={'/contact'} className="nav-link">Contact</Link></li>
+                    <li><Link to={'contact'} className="nav-link">Contact</Link></li>
                   </ul>
                 </nav>
               </div>
@@ -63,7 +63,7 @@ const Header = () => {
                 <nav className="xboot-mobile-menu">
                   <ul>
                     <li><Link to={'/'} >Home</Link></li>
-                    <li><Link to={'/about'} >About</Link></li>
+                    <li><Link to={'about'} >About</Link></li>
 
                     <li><Link to={'/services'} >Services</Link>
                       <ul>
@@ -85,7 +85,7 @@ const Header = () => {
 
                     <li><Link to={'/projects'} >Projects</Link></li>
                     <li><Link to={'/download'} >Download</Link></li>
-                    <li><Link to={'/contact'} >Contact</Link></li>
+                    <li><Link to={'contact'} >Contact</Link></li>
 
                   </ul>
                 </nav>
