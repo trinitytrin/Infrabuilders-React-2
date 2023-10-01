@@ -1,5 +1,5 @@
 
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 
 const Header = () => {
@@ -46,7 +46,7 @@ const Header = () => {
 
                       </ul>
                     </li>
-
+                    <Outlet />
                     <li><Link to={'/projects'} className="nav-link">Projects</Link></li>
                     <li><Link to={'/download'} className="nav-link">Download</Link></li>
                     <li><Link to={'contact'} className="nav-link">Contact</Link></li>
