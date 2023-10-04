@@ -15,7 +15,7 @@ const ServicesBox = () => {
                 </div>
                 <div className="row">
                     {services.map((service) => (
-                        <SingleService service={service} />
+                        <SingleService key={service.id} service={service} />
                     ))}
                 </div>
             </div>

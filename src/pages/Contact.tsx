@@ -17,6 +17,10 @@ const Contact = () => {
                     <div className="row">
                         {/* this one is for contact form */}
                         <div className="col-md-8 col-md-push-4">
+                            <div className="section-title text-left">
+                                <h2 className="area-title">Contact</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro labore ab voluptatem. Ut obcaecati quasi ullam, eaque deserunt, itaque soluta!</p>
+                            </div>
                             <ContactForm />
                         </div>
                         <br />
