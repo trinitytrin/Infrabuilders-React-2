@@ -2,7 +2,7 @@ import { z } from 'zod';
 import { services } from '../data/servicesInfo';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 
 
 const phoneRegex = new RegExp(
@@ -37,7 +37,7 @@ type FormData = z.infer<typeof schema>;
 
 
 const ContactForm = () => {
-    const navigate = useNavigate();
+    //const navigate = useNavigate();
     const { register, reset, handleSubmit, watch, formState: { errors, isSubmitSuccessful } } = useForm<FormData>({ resolver: zodResolver(schema) });
 
     const serviceTime = ['Right Away', 'In 3 Months', 'In 6 Months', 'In 1 Year', 'Just Asking'];
