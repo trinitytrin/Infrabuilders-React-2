@@ -1,10 +1,18 @@
+import BreadCrumb from "../components/BreadCrumb";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 
 
 const Projects = () => {
     useDocumentTitle('Projects');
     return (
-        <div>Projects landing Page</div>
+        <div className="content">
+            <BreadCrumb />
+            <div>
+                Projects page content
+            </div>
+
+
+        </div>
     )
 }
 

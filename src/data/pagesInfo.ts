@@ -15,18 +15,23 @@ export const pagesInfo = [
 
     {id: 3, 
     title:'Projects', 
-    path: 'projects'},
+    path: 'projects',
+    subtitle: 'Write some subtitle for Projects Page'},
 
     {id: 4, 
     title:'Download', 
-    path: 'download'},
+    path: 'download',
+    subtitle: 'Write some subtitle for Download Page'},
 
     {id: 5, 
     title:'Contact', 
     path: 'contact',
     subtitle: 'Write some subtitle for Contact Page'},
 
-    {id: 6, title:'Design', path: 'services/design'},
+    {id: 6, 
+    title:'Design', 
+    path: 'services/design',
+    subtitle: 'Write some subtitle for Design Page'},
 
     {id: 7, title:'Products', path: 'services/products'},
     {id: 8, title:'Solutions', path: 'services/solutions'},

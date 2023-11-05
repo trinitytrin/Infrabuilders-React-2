@@ -2,6 +2,7 @@ import { z } from 'zod';
 import { services } from '../data/servicesInfo';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+
 //import { useNavigate } from 'react-router-dom';
 
 
@@ -54,6 +55,7 @@ const ContactForm = () => {
         if (isSubmitSuccessful) {
             alert('Your request was submitted successfully.\n Thanks!');
             reset();
+
             //navigate('/index.html');
 
         }
@@ -145,6 +147,7 @@ const ContactForm = () => {
                 <button className="button-boxed" type="submit" value="submit">Send message <i className="ti-arrow-right"></i></button>
                 <p className="xboot-send-message"></p>
             </form>
+
 
         </ >
 
