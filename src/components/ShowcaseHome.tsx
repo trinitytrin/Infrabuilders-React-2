@@ -17,7 +17,7 @@ const ShowcaseHome = () => {
                             <li><a href="#" data-filter=".cat-5">Development</a></li>
                         </ul>
                     </div>
-                    <div className="portfolio portfolio-gutter portfolio-style-1 portfolio-masonry portfolio-not-full portfolio-3-column">
+                    <div className="portfolio portfolio-gutter portfolio-style-2 portfolio-masonry portfolio-not-full portfolio-3-column">
                         <div className="portfolio-item cat-1 cat-3 ">
                             <div className="portfolio-item-content">
                                 <div className="item-thumbnail">
