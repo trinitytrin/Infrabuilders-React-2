@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom"
-import { pagesInfo } from '../data/pagesInfo';
+import { pagesInfo } from '../../data/pagesInfo';
 
 const BreadCrumb = () => {
 

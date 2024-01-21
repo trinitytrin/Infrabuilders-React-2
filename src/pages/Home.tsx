@@ -1,11 +1,11 @@
 
 
-import BannerHome from "../components/BannerHome";
-import BrandLogos from "../components/BrandLogos";
-import ClientTestimonial from "../components/ClientTestimonial";
-import Counter from "../components/Counter";
-import ShowcaseHome from "../components/ShowcaseHome";
-import WorkProgressBar from "../components/WorkProgressBar";
+import BannerHome from "../components/home/BannerHome";
+import BrandLogos from "../components/home/BrandLogos";
+import ClientTestimonial from "../components/home/ClientTestimonial";
+import Counter from "../components/home/Counter";
+import ShowcaseHome from "../components/home/ShowcaseHome";
+import WorkProgressBar from "../components/home/WorkProgressBar";
 
 const Home = () => {
     return (

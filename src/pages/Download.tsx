@@ -1,4 +1,4 @@
-import BreadCrumb from "../components/BreadCrumb";
+import BreadCrumb from "../components/layout/BreadCrumb";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 
 

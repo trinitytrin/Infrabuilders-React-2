@@ -1,5 +1,5 @@
 
-import { Link, Outlet } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 const Header = () => {
@@ -23,11 +23,11 @@ const Header = () => {
                 </button>
                 <nav className="toggle-menu-section">
                   <ul className="main-menu clearfix hover-style-one">
-                    <li><Link to={'/'} className="nav-link"><i className="fa fa-2x fa-home"></i></Link> </li>
+                    <li><NavLink to={'/'} className="nav-link"><i className="fa fa-2x fa-home"></i></NavLink> </li>
 
-                    <li><Link to={'about'} className="nav-link">About</Link></li>
+                    <li><NavLink to={'about'} className="nav-link">About</NavLink></li>
 
-                    <li><Link to={'/services'} className="nav-link">Services <span><i className="fa fa-angle-down"></i></span></Link>
+                    <li><NavLink to={'/services'} className="nav-link">Services <span><i className="fa fa-angle-down"></i></span></NavLink>
                       <ul>
                         <li><Link to={'/services/design'} className="nav-link">Design <span><i className="fa fa-angle-down"></i></span></Link>
                           <ul>
@@ -46,10 +46,10 @@ const Header = () => {
 
                       </ul>
                     </li>
-                    <Outlet />
-                    <li><Link to={'/projects'} className="nav-link">Projects</Link></li>
-                    <li><Link to={'/download'} className="nav-link">Download</Link></li>
-                    <li><Link to={'contact'} className="nav-link">Contact</Link></li>
+
+                    <li><NavLink to={'/projects'} className="nav-link">Projects</NavLink></li>
+                    <li><NavLink to={'/download'} className="nav-link">Download</NavLink></li>
+                    <li><NavLink to={'/contact'} className="nav-link">Contact</NavLink></li>
                   </ul>
                 </nav>
               </div>

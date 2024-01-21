@@ -1,8 +1,8 @@
 
-import BreadCrumb from "../components/BreadCrumb";
-import ContactForm from "../components/ContactForm";
-import ContactInfoWidget from "../components/ContactInfoWidget";
-import ContactMap from "../components/ContactMap";
+import BreadCrumb from "../components/layout/BreadCrumb";
+import ContactForm from "../components/contact/ContactForm";
+import ContactInfoWidget from "../components/contact/ContactInfoWidget";
+import ContactMap from "../components/contact/ContactMap";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 
 

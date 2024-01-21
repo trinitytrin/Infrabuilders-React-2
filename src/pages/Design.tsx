@@ -1,10 +1,19 @@
+import BreadCrumb from "../components/layout/BreadCrumb";
+import DesignBox from "../components/design/DesignBox";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 
 
 const Design = () => {
     useDocumentTitle('Design');
     return (
-        <div>Design Landing Page</div>
+        <>
+            <div className="content">
+                <BreadCrumb />
+                <DesignBox />
+
+            </div>
+
+        </>
     )
 }
 

@@ -3,9 +3,9 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
-import Loader from './components/Loader';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Loader from './components/layout/Loader';
+import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
 import About from './pages/About';
 import Services from './pages/Services';
 import Design from './pages/Design';
@@ -64,9 +64,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
 
-          <Route path="services" element={<Services />}>
-            <Route path="design" element={<Design />} />
-          </Route>
+          <Route path="services" element={<Services />} />
+          <Route path="services/design" element={<Design />} />
+
 
           <Route path="projects" element={<Projects />} />
           <Route path="download" element={<Download />} />

@@ -1,4 +1,4 @@
-import { services } from '../data/servicesInfo';
+import { services } from '../../data/servicesInfo';
 import SingleService from './SingleService';
 
 const ServicesBox = () => {
