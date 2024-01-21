@@ -1,6 +1,6 @@
 
 import { HelmetProvider, Helmet } from 'react-helmet-async';
-import { Routes, Route, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import Footer from '../components/layout/Footer';
 import Header from '../components/layout/Header';
 import Loader from '../components/layout/Loader';
