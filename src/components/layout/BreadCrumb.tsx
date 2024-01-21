@@ -4,11 +4,14 @@ import { pagesInfo } from '../../data/pagesInfo';
 const BreadCrumb = () => {
 
     const location = useLocation();
+    console.log(location);
+
     const pages = location.pathname.trim().split('/')
         .filter(e => e.length >= 1)
         .map(p => p.charAt(0).toUpperCase() + p.slice(1)); //capitalizing all pages
-    const currentPage = pages[pages.length - 1];
-
+    const thisPage = pagesInfo.find(p => p.path === location.pathname);
+    console.log(thisPage);
+    console.log(pages);
 
 
     return (
@@ -18,14 +21,13 @@ const BreadCrumb = () => {
                     <div className="col-xs-12">
                         <div className="breadcrumb-content">
                             <div className="breadcrumb-text-wrapper">
-                                <h2 className="page-name">{currentPage}</h2>
-                                <p>{pagesInfo.find(p => p.title === currentPage)?.subtitle} </p>
+                                <h2 className="page-name">{thisPage?.title}</h2>
+                                <p>{thisPage?.subtitle} </p>
                             </div>
                             <ul className="breadcrumb-list">
-                                <li><a href="/">Home</a></li>
+                                <li><Link to={'/'}>Home</Link></li>
                                 {pages.map((page) =>
-
-                                    <li key={page}><Link to={'/' + pagesInfo.find(p => p.title === page)?.path}>{page}</Link></li>
+                                    <li key={page}><Link to={'' + pagesInfo.find(p => p.title.split(' ')[0] === page)?.path}>{page}</Link></li>
                                 )}
                             </ul>
                         </div>
