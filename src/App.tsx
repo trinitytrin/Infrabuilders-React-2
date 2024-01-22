@@ -12,6 +12,9 @@ import Design from './pages/Design';
 import Projects from './pages/Projects';
 import Download from './pages/Download';
 import ArchitecturalDesign from './pages/ArchitecturalDesign';
+import ServicesLanding from './pages/ServicesLanding';
+import DesignLanding from './pages/DesignLanding';
+
 //import { useEffect } from 'react';
 
 
@@ -61,18 +64,26 @@ function App() {
         <Header />
         {/* now the pages and their routes go here  */}
 
+
+
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="about" element={<About />} />
 
-          <Route path="/services" element={<Services />} />
-          <Route path="/services/design" element={<Design />} />
-          <Route path="/services/design/architectural" element={<ArchitecturalDesign />} />
+          <Route path="services" element={<Services />} >
+            <Route path="" element={<ServicesLanding />} />
+            <Route path="design" element={<Design />}>
+              <Route path="" element={<DesignLanding />} />
+              <Route path="architectural" element={<ArchitecturalDesign />} />
+            </Route>
+          </Route>
 
 
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/download" element={<Download />} />
-          <Route path="/contact" element={<Contact />} />
+
+
+          <Route path="projects" element={<Projects />} />
+          <Route path="download" element={<Download />} />
+          <Route path="contact" element={<Contact />} />
 
         </Routes>
 

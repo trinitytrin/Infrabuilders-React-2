@@ -7,6 +7,9 @@ import Projects from "../pages/Projects";
 import Download from "../pages/Download";
 import Layout from "./Layout";
 import Design from "../pages/Design";
+import ServicesLanding from "../pages/ServicesLanding";
+import ArchitecturalDesign from "../pages/ArchitecturalDesign";
+import DesignLanding from "../pages/DesignLanding";
 
 const router = createBrowserRouter([
     {
@@ -19,7 +22,14 @@ const router = createBrowserRouter([
             {
                 path: 'services', element: <Services />,
                 children: [
-                    { path: 'design', element: <Design /> },
+                    { path: '', element: <ServicesLanding /> },
+                    {
+                        path: 'design', element: <Design />,
+                        children: [
+                            { path: '', element: <DesignLanding /> },
+                            { path: 'architectural', element: <ArchitecturalDesign /> },
+                        ]
+                    },
                 ]
             },
             { path: 'projects', element: <Projects /> },
