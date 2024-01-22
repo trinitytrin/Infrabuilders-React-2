@@ -4,12 +4,15 @@ import { pagesInfo } from '../../data/pagesInfo';
 const BreadCrumb = () => {
 
     const location = useLocation();
-    console.log(location);
+    //console.log(location);
 
     const pages = location.pathname.trim().split('/')
         .filter(e => e.length >= 1)
         .map(p => p.charAt(0).toUpperCase() + p.slice(1)); //capitalizing all pages
-    const thisPage = pagesInfo.find(p => p.path === location.pathname);
+    let thisPage = pagesInfo.find(p => p.path === location.pathname);
+    if (thisPage == undefined) {
+        thisPage = pagesInfo.find(p => p.title === 'Error Page 404');
+    }
     console.log(thisPage);
     console.log(pages);
 

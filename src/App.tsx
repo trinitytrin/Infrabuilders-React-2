@@ -14,6 +14,7 @@ import Download from './pages/Download';
 import ArchitecturalDesign from './pages/ArchitecturalDesign';
 import ServicesLanding from './pages/ServicesLanding';
 import DesignLanding from './pages/DesignLanding';
+import ErrorPage from './pages/ErrorPage';
 
 //import { useEffect } from 'react';
 
@@ -67,7 +68,8 @@ function App() {
 
 
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home />} errorElement={<ErrorPage />} />
+          <Route path="*" element={<ErrorPage />} />
           <Route path="about" element={<About />} />
 
           <Route path="services" element={<Services />} >

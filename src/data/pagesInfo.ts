@@ -43,4 +43,10 @@ export const pagesInfo = [
         title:'Architectural Design', 
         path: '/services/design/architectural',
         subtitle: 'Write some subtitle for Architectural Design Page'},
+        
+    {id: 11, 
+        title:'Error Page 404', 
+        path: '*',
+        subtitle: 'Page not found! '},
+
 ];
