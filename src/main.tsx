@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import '../style.css';
-import { RouterProvider } from "react-router-dom";
-//import App from './App';
-import router from './routing/routes';
+import { BrowserRouter } from "react-router-dom";
+//import router from './routing/routes';
+import App from './App';
 
 
 
@@ -15,12 +15,12 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
 
 
-    {/* <BrowserRouter>
+    <BrowserRouter>
 
       <App />
 
-    </BrowserRouter> */}
-    <RouterProvider router={router} />
+    </BrowserRouter>
+    {/* <RouterProvider router={router} /> */}
 
 
 

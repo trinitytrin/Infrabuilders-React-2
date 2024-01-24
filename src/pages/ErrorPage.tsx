@@ -5,6 +5,7 @@ import useDocumentTitle from "../hooks/useDocumentTitle";
 
 const ErrorPage = () => {
     useDocumentTitle('Error Page');
+
     return (
         <div className="content">
             <BreadCrumb />
@@ -17,6 +18,7 @@ const ErrorPage = () => {
                                 <h2>Ohh.!</h2>
                                 <h1>404</h1>
                                 <h3>Desired page dose not exist.</h3>
+
                                 <Link to={'/'} className="button">Back to home<i className="ti-arrow-right"></i></Link>
                             </div>
                         </div>

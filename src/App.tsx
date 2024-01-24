@@ -99,8 +99,8 @@ function App() {
       <Helmet>
         <script src='/js/modernizr-2.8.3.min.js' ></script>
         <script src='/js/plugins.js' type='module' async></script>
-        <script src='/js/main.js' defer></script>
-        <script src="js/ajax-mail.js"></script>
+        <script src='/js/main.js' type='module' ></script>
+        <script src="js/ajax-mail.js" type='module'></script>
 
       </Helmet >
 

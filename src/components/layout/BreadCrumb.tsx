@@ -13,8 +13,8 @@ const BreadCrumb = () => {
     if (thisPage == undefined) {
         thisPage = pagesInfo.find(p => p.title === 'Error Page 404');
     }
-    console.log(thisPage);
-    console.log(pages);
+    //console.log(thisPage);
+    //console.log(pages);
 
 
     return (
