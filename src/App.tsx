@@ -15,6 +15,8 @@ import ArchitecturalDesign from './pages/ArchitecturalDesign';
 import ServicesLanding from './pages/ServicesLanding';
 import DesignLanding from './pages/DesignLanding';
 import ErrorPage from './pages/ErrorPage';
+import ProjectsLanding from './pages/ProjectsLanding';
+import SingleProject from './pages/SingleProject';
 
 //import { useEffect } from 'react';
 
@@ -80,10 +82,11 @@ function App() {
             </Route>
           </Route>
 
+          <Route path="projects" element={<Projects />} >
+            <Route path="" element={<ProjectsLanding />} />
+            <Route path="projectId" element={<SingleProject />} />
+          </Route>
 
-
-
-          <Route path="projects" element={<Projects />} />
           <Route path="download" element={<Download />} />
           <Route path="contact" element={<Contact />} />
 
@@ -99,7 +102,7 @@ function App() {
       <Helmet>
         <script src='/js/modernizr-2.8.3.min.js' ></script>
         <script src='/js/plugins.js' type='module' async></script>
-        <script src='/js/main.js' type='module' ></script>
+        <script src='/js/main.js'  ></script>
         <script src="js/ajax-mail.js" type='module'></script>
 
       </Helmet >

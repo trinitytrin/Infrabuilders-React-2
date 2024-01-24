@@ -6,14 +6,14 @@ import useDocumentTitle from '../hooks/useDocumentTitle';
 const DesignLanding = () => {
     useDocumentTitle('Design');
     return (
-        <>
-            <div className="content">
-                <BreadCrumb />
-                <DesignBox />
 
-            </div>
+        <div className="content">
+            <BreadCrumb />
+            <DesignBox />
 
-        </>
+        </div>
+
+
     )
 }
 

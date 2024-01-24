@@ -1,18 +1,11 @@
-import BreadCrumb from "../components/layout/BreadCrumb";
+import { Outlet } from "react-router-dom";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 
 
 const Projects = () => {
     useDocumentTitle('Projects');
     return (
-        <div className="content">
-            <BreadCrumb />
-            <div>
-                Projects page content
-            </div>
-
-
-        </div>
+        <Outlet />
     )
 }
 

@@ -2,7 +2,7 @@
 
 import BannerHome from "../components/home/BannerHome";
 import BrandLogos from "../components/home/BrandLogos";
-import ClientTestimonial from "../components/home/ClientTestimonial";
+import ClientTestimonial from "../components/home/testimonial/ClientTestimonial";
 import Counter from "../components/home/Counter";
 import ShowcaseHome from "../components/home/ShowcaseHome";
 import WorkProgressBar from "../components/home/WorkProgressBar";
