@@ -17,7 +17,7 @@ import DesignLanding from './pages/DesignLanding';
 import ErrorPage from './pages/ErrorPage';
 import ProjectsLanding from './pages/ProjectsLanding';
 import SingleProject from './pages/SingleProject';
-import { Project, projects } from './data/projectsInfo';
+//import { Project, projects } from './data/projectsInfo';
 
 //import { useEffect } from 'react';
 
@@ -55,7 +55,7 @@ function App() {
   //     document.body.removeChild(modernizrScript);
   //   };
   // }, []);
-  let selectedProject = projects.filter(p => p.id === 1);
+  //let selectedProject = projects.filter(p => p.id === 1);
 
 
   return (
@@ -86,7 +86,7 @@ function App() {
 
           <Route path="projects" element={<Projects />} >
             <Route path="" element={<ProjectsLanding />} />
-            <Route path="project-id" element={<SingleProject />} />
+            <Route path=":id" element={<SingleProject />} />
             {/* <Route path="projectId" element={<SingleProject project={selectedProject} />} /> */}
           </Route>
 

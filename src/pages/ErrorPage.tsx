@@ -6,6 +6,7 @@ import useDocumentTitle from "../hooks/useDocumentTitle";
 const ErrorPage = () => {
     useDocumentTitle('Error Page');
 
+
     return (
         <div className="content">
             <BreadCrumb />

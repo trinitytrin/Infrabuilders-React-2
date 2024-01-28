@@ -50,9 +50,9 @@ export const pagesInfo = [
         subtitle: 'Page not found! '},
 
     {id: 12, 
-        title:'Project - Id', 
-        path: '/projects/project-id',
-        subtitle: 'Write some subtitle for Projects Page'},
+        title:'Project Details', 
+        path: '/projects/project-:id',
+        subtitle: `Gather detailed information about our each project`},
             
 
 ];

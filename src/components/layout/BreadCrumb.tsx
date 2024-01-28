@@ -1,10 +1,13 @@
-import { Link, useLocation } from "react-router-dom"
+import { Link, useLocation, useParams } from "react-router-dom"
 import { pagesInfo } from '../../data/pagesInfo';
 
 const BreadCrumb = () => {
 
     const location = useLocation();
-    //console.log(location);
+    const params = useParams();
+
+    console.log(location);
+    console.log(params);
 
     const pages = location.pathname.trim().split('/')
         .filter(e => e.length >= 1)
@@ -12,6 +15,12 @@ const BreadCrumb = () => {
     let thisPage = pagesInfo.find(p => p.path === location.pathname);
     if (thisPage == undefined) {
         thisPage = pagesInfo.find(p => p.title === 'Error Page 404');
+    }
+
+    const projectRegex = new RegExp(/\/projects\/\d/);
+    if (projectRegex.test(location.pathname)) {
+        console.log('true');
+        thisPage = pagesInfo.find(p => p.title === 'Project Details')
     }
     //console.log(thisPage);
     //console.log(pages);
@@ -30,7 +39,7 @@ const BreadCrumb = () => {
                             <ul className="breadcrumb-list">
                                 <li><Link to={'/'}>Home</Link></li>
                                 {pages.map((page) =>
-                                    <li key={page}><Link to={'' + pagesInfo.find(p => p.title.split(' ')[0] === page)?.path}>{page}</Link></li>
+                                    <li key={page}>{page}</li>
                                 )}
                             </ul>
                         </div>

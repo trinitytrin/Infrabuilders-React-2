@@ -1,4 +1,5 @@
-import { Project } from "../../data/projectsInfo";
+import { Project } from "../../hooks/useProjects";
+
 
 interface Props {
     project: Project;

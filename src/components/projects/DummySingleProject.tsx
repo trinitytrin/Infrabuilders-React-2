@@ -1,8 +1,16 @@
-import { projects } from "../../data/projectsInfo";
+import { useParams } from "react-router-dom";
+import useProjects from "../../hooks/useProjects";
+import ItemNavigation from "../layout/ItemNavigation";
+
 
 
 const DummySingleProject = () => {
-    const project = projects.find(p => p.id === 1);
+    const { data } = useProjects();
+    const params = useParams();
+    const project_id = Number(params.id?.toString());
+
+    const project = data.find(p => p.id === project_id);
+    const project_description = project?.description.split('\n');
     return (
         <div>
             <div className="single-project-area xboot-standard-row">
@@ -10,22 +18,19 @@ const DummySingleProject = () => {
                     <div className="row">
                         <div className="col-lg-12 col-md-12">
                             <div className="single-project-slider single-project-thumb-wrapper">
-                                <a href="/img/infra-demo/eidgah-2.png" data-lightbox="img-gallery"><img src="/img/infra-demo/eidgah-2.png" alt="" /></a>
-                                <a href="/img/infra-demo/eidgah-1.png" data-lightbox="img-gallery"><img src="img/infra-demo/eidgah-1.png" alt="" /></a>
-                                <a href="/img/infra-demo/eidgah-3.png" data-lightbox="img-gallery"><img src="img/infra-demo/eidgah-3.png" alt="" /></a>
-                                <a href="/img/infra-demo/eidgah-4.png" data-lightbox="img-gallery"><img src="img/infra-demo/eidgah-4.png" alt="" /></a>
-                                <a href="/img/infra-demo/eidgah-5.png" data-lightbox="img-gallery"><img src="img/infra-demo/eidgah-5.png" alt="" /></a>
-                                <a href="/img/infra-demo/eidgah-6.png" data-lightbox="img-gallery"><img src="img/infra-demo/eidgah-6png" alt="" /></a>
-                                <a href="/img/infra-demo/eidgah-7.png" data-lightbox="img-gallery"><img src="img/infra-demo/eidgah-7.png" alt="" /></a>
-                                <a href="/img/infra-demo/eidgah-8.png" data-lightbox="img-gallery"><img src="img/infra-demo/eidgah-8.png" alt="" /></a>
+                                <a href={project?.image_url[0]} data-lightbox="img-gallery"><img src={project?.image_url[0]} alt="" /></a>
+                                {project?.image_url.filter((_p, i) => i !== 0).map((photo, i) => (
+                                    <a key={i} href={photo} data-lightbox="img-gallery"><img src={photo.slice(1)} alt="" /></a>
+                                ))}
+
                                 <small style={{ color: "gray" }}>Click on the photo to browse more photos of this project</small>
                             </div>
                         </div>
                         <div className="col-lg-9 col-md-8 col-sm-12">
                             <div className="single-project-description">
                                 <h2 className="single-project-title">{project?.title}</h2>
-                                {project?.description.map(para => (
-                                    <p>{para}</p>
+                                {project_description?.map((para, i) => (
+                                    <p key={i} >{para}</p>
                                 ))}
 
                             </div>
@@ -49,7 +54,7 @@ const DummySingleProject = () => {
                                     <h4 className="widget-title">Tags</h4>
                                     <div className="tags">
                                         {project?.tags.map(t => (
-                                            <a href="#">{t}</a>
+                                            <a key={t} href="#">{t}</a>
                                         ))}
 
 
@@ -73,15 +78,7 @@ const DummySingleProject = () => {
                         </div>
 
                     </div>
-                    <div className="row">
-                        <div className="col-md-12">
-                            <div className="post-navigation-wrapper">
-                                <a href="#" className="post-navigation previous-post"><i className="fa fa-angle-left"></i>Previous Project</a>
-                                <a href="infra-home.html" className="button-inner-project"><i className="ti-view-grid"></i></a>
-                                <a href="#" className="post-navigation next-post">Next Project<i className="fa fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                    <ItemNavigation data={'projects'} dataSize={data.length} itemId={Number(project?.id)} />
 
                 </div>
             </div>

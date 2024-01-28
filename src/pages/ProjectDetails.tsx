@@ -1,19 +1,18 @@
+import { useParams } from "react-router-dom";
 import BreadCrumb from "../components/layout/BreadCrumb";
 import DummySingleProject from "../components/projects/DummySingleProject";
-import SingleProjectPage from "../components/projects/SingleProjectPage";
-import { Project } from "../data/projectsInfo";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 
-interface Props {
-    project: Project;
-}
+
+
 const SingleProject = () => {
-    useDocumentTitle('Project - 1');
+    const itemId = Number(useParams().id?.toString());
+    useDocumentTitle('Project - ' + itemId);
     return (
 
         <div className="content">
             <BreadCrumb />
-            <DummySingleProject />
+            <DummySingleProject project_id={itemId} />
 
         </div>
 
