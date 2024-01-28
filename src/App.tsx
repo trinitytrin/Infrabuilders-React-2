@@ -16,7 +16,8 @@ import ServicesLanding from './pages/ServicesLanding';
 import DesignLanding from './pages/DesignLanding';
 import ErrorPage from './pages/ErrorPage';
 import ProjectsLanding from './pages/ProjectsLanding';
-import SingleProject from './pages/SingleProject';
+
+import ProjectDetails from './pages/ProjectDetails';
 //import { Project, projects } from './data/projectsInfo';
 
 //import { useEffect } from 'react';
@@ -86,7 +87,7 @@ function App() {
 
           <Route path="projects" element={<Projects />} >
             <Route path="" element={<ProjectsLanding />} />
-            <Route path=":id" element={<SingleProject />} />
+            <Route path=":id" element={<ProjectDetails />} />
             {/* <Route path="projectId" element={<SingleProject project={selectedProject} />} /> */}
           </Route>
 

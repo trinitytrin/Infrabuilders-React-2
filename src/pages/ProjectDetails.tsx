@@ -5,14 +5,14 @@ import useDocumentTitle from "../hooks/useDocumentTitle";
 
 
 
-const SingleProject = () => {
+const ProjectDetails = () => {
     const itemId = Number(useParams().id?.toString());
     useDocumentTitle('Project - ' + itemId);
     return (
 
         <div className="content">
             <BreadCrumb />
-            <DummySingleProject project_id={itemId} />
+            <DummySingleProject />
 
         </div>
 
@@ -20,4 +20,4 @@ const SingleProject = () => {
     )
 }
 
-export default SingleProject;
+export default ProjectDetails;

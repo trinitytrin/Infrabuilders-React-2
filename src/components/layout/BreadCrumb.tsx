@@ -38,9 +38,10 @@ const BreadCrumb = () => {
                             </div>
                             <ul className="breadcrumb-list">
                                 <li><Link to={'/'}>Home</Link></li>
-                                {pages.map((page) =>
-                                    <li key={page}>{page}</li>
+                                {pages.filter((_p, i) => i !== pages.length - 1).map((page) =>
+                                    <li key={page}><Link to={'' + pagesInfo.find(p => p.title === page)?.path}>{page}</Link></li>
                                 )}
+                                <li>{pages[pages.length - 1]}</li>
                             </ul>
                         </div>
                     </div>
