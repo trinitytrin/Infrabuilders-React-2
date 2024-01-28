@@ -29,14 +29,14 @@ const ProjectBox = () => {
                         <div className="portfolio-item cat-1 cat-3 ">
                             <div className="portfolio-item-content">
                                 <div className="item-thumbnail">
-                                    <img src="img/portfolio/home/1.jpg" alt="" />
-                                    <a href="img/portfolio/box/1.jpg" className="button" data-lightbox="roadtrip"><i className="ti-zoom-in"></i></a>
+                                    <img src="img/infra-demo/eidgah-2.png" alt="" />
+                                    <a href="img/infra-demo/eidgah-2.png" className="button" data-lightbox="roadtrip"><i className="ti-zoom-in"></i></a>
                                 </div>
                                 <div className="portfolio-description">
-                                    <h4><Link to={'/projects/projectId'}>single project title</Link></h4>
+                                    <h4><Link to={'/projects/project-id'}>Rajshahi Central Eidgah</Link></h4>
                                     <ul className="portfolio-category">
                                         <li><a href="#">Design</a></li>
-                                        <li><a href="#">Development</a></li>
+                                        <li><a href="#">Architectural</a></li>
                                     </ul>
                                 </div>
                             </div>

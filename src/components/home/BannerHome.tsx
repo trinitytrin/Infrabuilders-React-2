@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 
@@ -26,7 +27,7 @@ const BannerHome = () => {
                                 </span>
                             </h1>
                             <p>Some static text about infrabuilders...Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt minus, molestias minima voluptates voluptas ad quae sunt consequuntur amet itaque</p>
-                            <a href="#" className="button">Contact Us <i className="ti-arrow-right"></i></a>
+                            <Link to={'/contact'} className="button">Contact Us <i className="ti-arrow-right"></i></Link>
                         </div>
                     </div>
                 </div>

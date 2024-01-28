@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 
@@ -30,7 +31,7 @@ const WorkProgressBar = () => {
                                         <p>professional</p>
                                     </div>
                                 </div>
-                                <a href="contact.html" className="button">Contact Us <i className="ti-arrow-right"></i></a>
+                                <Link to={'/contact'} className="button">Contact Us <i className="ti-arrow-right"></i></Link>
                             </div>
                         </div>
                     </div>
