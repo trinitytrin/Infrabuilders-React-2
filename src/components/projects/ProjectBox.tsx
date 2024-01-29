@@ -29,14 +29,14 @@ const ProjectBox = () => {
                         </ul>
                     </div>
 
+                    <div className="row">
+                        <div className="portfolio portfolio-gutter portfolio-style-2 portfolio-masonry portfolio-not-full portfolio-3-column">
+                            {projects.map(p => (
+                                <SingleProjectBox key={p.id} project={p} />
 
-                    <div className="portfolio portfolio-gutter portfolio-style-2 portfolio-masonry portfolio-not-full portfolio-3-column">
-                        {projects.map(p => (
-                            <SingleProjectBox key={p.id} project={p} />
+                            ))}
 
-                        ))}
-
-
+                        </div>
                     </div>
 
 
