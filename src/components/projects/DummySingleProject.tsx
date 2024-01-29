@@ -105,7 +105,7 @@ const DummySingleProject = () => {
                     <div className="row">
                         <div className="related-project-slider portfolio-style-2">
                             {related_projects.map(related_project => (
-                                <div className="portfolio-item col-md-4 hidden-sm cat-1 cat-3 ">
+                                <div className="portfolio-item col-md-4 hidden-sm">
                                     <SingleProjectBox project={related_project} />
                                 </div>
                             ))}

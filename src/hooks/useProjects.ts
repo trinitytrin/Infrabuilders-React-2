@@ -17,6 +17,7 @@ export interface Project {
     download_link?: string;
     used_products?: UsedProducts[];
     description: string;
+    highlight?: boolean;
 
 }
 

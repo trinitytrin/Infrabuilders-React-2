@@ -1050,6 +1050,10 @@ label {
 
 .item-thumbnail img {
     width: 100%;
+}
+
+.item-thumbnail-custom img {
+    width: 100%;
     height: 40vh;
     object-fit: cover;
 }

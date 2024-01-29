@@ -11,9 +11,9 @@ const SingleProjectBox = ({ project }: Props) => {
 
         <div className="portfolio-item">
             <div className="portfolio-item-content">
-                <div className="item-thumbnail">
+                <div className="item-thumbnail-custom">
                     <img src={project.image_url[0]} alt="" />
-                    <a href={project.image_url[0]} className="button" data-lightbox="roadtrip"><i className="ti-zoom-in"></i></a>
+
                 </div>
                 <div className="portfolio-description">
                     <h4><Link to={`/projects/${project.id}`}>{project.title}</Link></h4>

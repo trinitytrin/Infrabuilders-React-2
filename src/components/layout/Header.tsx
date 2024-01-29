@@ -25,7 +25,7 @@ const Header = () => {
                   <ul className="main-menu clearfix hover-style-one">
                     <li><NavLink to={'/'} className="nav-link"><i className="fa fa-2x fa-home"></i></NavLink> </li>
 
-                    <li><NavLink to={'about'} className="nav-link">About</NavLink></li>
+                    <li><NavLink to={'/about'} className="nav-link">About</NavLink></li>
 
                     <li><NavLink to={'/services'} className="nav-link">Services <span><i className="fa fa-angle-down"></i></span></NavLink>
                       <ul>
