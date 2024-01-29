@@ -1,10 +1,12 @@
 
+import { useState } from "react";
 import useProjects from "../../hooks/useProjects";
 import SingleProjectBox from "./SingleProjectBox";
 
 
 const ProjectBox = () => {
     const { data } = useProjects();
+    const [projects, setProjects] = useState(data);
     return (
 
         <div className="xboot-standard-row white-bg service-section">
@@ -20,16 +22,16 @@ const ProjectBox = () => {
                 <div className="portfolio-content">
                     <div className="portfolio-filter-wrap text-center">
                         <ul className="portfolio-filter">
-                            <li className="active"><a href="#" data-filter="*"> All</a></li>
-                            <li><a href="#" data-filter=".cat-1">Completed</a></li>
-                            <li><a href="#" data-filter=".cat-3">Ongoing</a></li>
-                            <li><a href="#" data-filter=".cat-2">Upcoming</a></li>
+                            <li className="active"><a href="#" onClick={() => setProjects(data)}> All</a></li>
+                            <li><a href="#" onClick={() => setProjects(data.filter(p => p.status === 'completed'))} >Completed</a></li>
+                            <li><a href="#" onClick={() => setProjects(data.filter(p => p.status === 'ongoing'))}>Ongoing</a></li>
+                            <li><a href="#" onClick={() => setProjects(data.filter(p => p.status === 'upcoming'))}>Upcoming</a></li>
                         </ul>
                     </div>
 
 
                     <div className="portfolio portfolio-gutter portfolio-style-2 portfolio-masonry portfolio-not-full portfolio-3-column">
-                        {data.map(p => (
+                        {projects.map(p => (
                             <SingleProjectBox key={p.id} project={p} />
 
                         ))}

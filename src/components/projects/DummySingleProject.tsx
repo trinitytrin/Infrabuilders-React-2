@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
 import useProjects from "../../hooks/useProjects";
 import ItemNavigation from "../layout/ItemNavigation";
+import { Project } from '../../hooks/useProjects';
+import SingleProjectBox from "./SingleProjectBox";
 
 
 
@@ -8,8 +10,12 @@ const DummySingleProject = () => {
     const { data } = useProjects();
     const params = useParams();
     const project_id = Number(params.id?.toString());
+    const project = data.find(p => p.id === project_id) as Project;
+    const related_projects = data.filter(p => p.tags.some(tag => project.tags.includes(tag)))
+        .filter(p => p.id !== project_id);
 
-    const project = data.find(p => p.id === project_id);
+
+
     const project_description = project?.description.split('\n');
     return (
         <div>
@@ -67,13 +73,16 @@ const DummySingleProject = () => {
                         <div className="col-lg-3 col-md-4 col-sm-12">
                             <div className="project-meta-wrapper meta-right-sidebar">
                                 <h4 className="widget-title">Products used in this Service</h4>
-                                <ul className="single-portfolio-meta">
-                                    <li><a href="infra-implementationsupply.html" target="_blank" rel="noopener noreferrer">Product 1 Name <i className="ti-arrow-top-right"></i></a></li>
+                                {project.used_products !== undefined ? <>
+                                    <ul className="single-portfolio-meta">
+                                        {project.used_products?.map(product => (
+                                            <li><a href={product.url} target="_blank" rel="noopener noreferrer">{product.name} <i className="ti-arrow-top-right"></i></a></li>
+                                        ))}
 
-                                    <li><a href="infra-implementationsupply.html" target="_blank" rel="noopener noreferrer">Product 2 Name <i className="ti-arrow-top-right"></i></a></li>
+                                    </ul>
 
-                                    <li><a href="infra-implementationsupply.html" target="_blank" rel="noopener noreferrer">Product 3 Name <i className="ti-arrow-top-right"></i></a></li>
-                                </ul>
+                                </> : <div><p> No used products to show for this project</p></div>}
+
                             </div>
                         </div>
 
@@ -95,51 +104,13 @@ const DummySingleProject = () => {
                     </div>
                     <div className="row">
                         <div className="related-project-slider portfolio-style-2">
-                            <div className="portfolio-item col-md-4 col-sm-6 cat-1 cat-3 ">
-                                <div className="portfolio-item-content">
-                                    <div className="item-thumbnail">
-                                        <img src="/img/infra-demo/slider-3.jpg" alt="" />
-                                        <a href="/img/infra-demo/slider-3.jpg" className="zoom-btn" data-lightbox="related-img-gallery"><i className="fa fa-search"></i></a>
-                                    </div>
-                                    <div className="portfolio-description">
-                                        <h4><a href="#">single project title</a></h4>
-                                        <ul className="portfolio-category">
-                                            <li><a href="#">Project</a></li>
-                                            <li><a href="#">Category Name</a></li>
-                                        </ul>
-                                    </div>
+                            {related_projects.map(related_project => (
+                                <div className="portfolio-item col-md-4 hidden-sm cat-1 cat-3 ">
+                                    <SingleProjectBox project={related_project} />
                                 </div>
-                            </div>
-                            <div className="portfolio-item col-md-4 col-sm-6 cat-1 cat-3 ">
-                                <div className="portfolio-item-content">
-                                    <div className="item-thumbnail">
-                                        <img src="/img/infra-demo/slider-4.jpg" alt="" />
-                                        <a href="/img/infra-demo/slider-4.jpg" className="zoom-btn" data-lightbox="related-img-gallery"><i className="fa fa-search"></i></a>
-                                    </div>
-                                    <div className="portfolio-description">
-                                        <h4><a href="#">single project title</a></h4>
-                                        <ul className="portfolio-category">
-                                            <li><a href="#">Project</a></li>
-                                            <li><a href="#">Category Name</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="portfolio-item col-md-4 hidden-sm cat-1 cat-3 ">
-                                <div className="portfolio-item-content">
-                                    <div className="item-thumbnail">
-                                        <img src="/img/infra-demo/slider-2.jpeg" alt="" />
-                                        <a href="/img/infra-demo/slider-2.jpeg" className="zoom-btn" data-lightbox="related-img-gallery"><i className="fa fa-search"></i></a>
-                                    </div>
-                                    <div className="portfolio-description">
-                                        <h4><a href="#">single project title</a></h4>
-                                        <ul className="portfolio-category">
-                                            <li><a href="#">Project</a></li>
-                                            <li><a href="#">Category Name</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                            ))}
+
+
                         </div>
                     </div>
                 </div>
