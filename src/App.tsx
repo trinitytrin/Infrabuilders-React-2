@@ -3,9 +3,9 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
-import Loader from './components/layout/Loader';
-import Header from './components/layout/Header';
-import Footer from './components/layout/Footer';
+// import Loader from './components/layout/Loader';
+// import Header from './components/layout/Header';
+// import Footer from './components/layout/Footer';
 import About from './pages/About';
 import Services from './pages/Services';
 import Design from './pages/Design';
@@ -18,6 +18,7 @@ import ErrorPage from './pages/ErrorPage';
 import ProjectsLanding from './pages/ProjectsLanding';
 
 import ProjectDetails from './pages/ProjectDetails';
+import Layout from './routing/Layout';
 //import { Project, projects } from './data/projectsInfo';
 
 //import { useEffect } from 'react';
@@ -64,16 +65,12 @@ function App() {
 
     <HelmetProvider>
 
-      <Loader />
-      <div className="wrapper">
-
-        <Header />
-        {/* now the pages and their routes go here  */}
 
 
 
-        <Routes>
-          <Route path="/" element={<Home />} errorElement={<ErrorPage />} />
+      <Routes>
+        <Route path="/" element={<Layout />} errorElement={<ErrorPage />}>
+          <Route path="" element={<Home />} />
           <Route path="*" element={<ErrorPage />} />
           <Route path="about" element={<About />} />
 
@@ -93,12 +90,11 @@ function App() {
 
           <Route path="download" element={<Download />} />
           <Route path="contact" element={<Contact />} />
+        </Route>
 
-        </Routes>
+      </Routes>
 
 
-        <Footer />
-      </div>
 
 
 
