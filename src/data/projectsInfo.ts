@@ -1,6 +1,6 @@
 export default [
     {id: 1, 
-    title: 'Concept for Rajshahi Central Eidgah', 
+    title: 'Rajshahi Central Eidgah', 
     client: ' Rajshahi City Corporation',
     start_date: '23/01/2024',
     
@@ -64,7 +64,7 @@ export default [
             },
 
             {id: 4, 
-                title: 'Concept for Rajshahi Central Eidgah', 
+                title: 'Rajshahi Central Eidgah', 
                 client: ' Rajshahi City Corporation',
                 start_date: '23/01/2024',
                 
