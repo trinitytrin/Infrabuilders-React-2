@@ -1,3 +1,4 @@
+import DownloadBox from "../components/download/DownloadBox";
 import BreadCrumb from "../components/layout/BreadCrumb";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 
@@ -7,9 +8,7 @@ const Download = () => {
     return (
         <div className="content">
             <BreadCrumb />
-            <div>
-                Download page content
-            </div>
+            <DownloadBox />
 
 
         </div>
