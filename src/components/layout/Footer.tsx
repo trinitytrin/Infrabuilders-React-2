@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Footer = () => {
@@ -8,13 +9,13 @@ const Footer = () => {
                 <div className="footer-top dark-bg">
                     <div className="container">
                         <div className="row">
-                            <div className="col-md-4 col-sm-6">
+                            <div className="col-md-6 col-sm-6">
                                 <div className="single-footer-widget footer-info-widget">
                                     <h2 className="logo">
-                                        <a href="#"><img src="img/logo/logo-white.png" alt="" />  </a>
+                                        <Link to={'/'}><img src="img/logo/logo-white.png" alt="" />  </Link>
                                     </h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur.</p>
-                                    <a href="#" className="button">About Us <i className="ti-arrow-right"></i></a>
+                                    <Link to={'/about'} className="button">About Us <i className="ti-arrow-right"></i></Link>
                                 </div>
                             </div>
                             <div className="col-md-3 col-sm-6">
@@ -27,28 +28,18 @@ const Footer = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-md-1 col-sm-6">
+                            <div className="col-md-3 col-sm-6">
                                 <div className="single-footer-widget">
                                     <ul className="footer-menu">
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">About</a></li>
-                                        <li><a href="#">Services</a></li>
-                                        <li><a href="#">News</a></li>
-                                        <li><a href="#">Contact</a></li>
+                                        <li><Link to={'/'}>Home</Link></li>
+                                        <li><Link to={'/about'}>About</Link></li>
+                                        <li><Link to={'/services'}>Services</Link></li>
+                                        <li><Link to={'/download'}>Download</Link></li>
+                                        <li><Link to={'/contact'}>Contact</Link></li>
                                     </ul>
                                 </div>
                             </div>
-                            <div className="col-md-4 col-sm-6">
-                                <div className="single-footer-widget subscribe-widget-wrapper">
-                                    <h4 className="widget-title">subscribe newsletter</h4>
-                                    <div className="subscribe-widget">
-                                        <form action="#">
-                                            <input type="email" placeholder="Email" />
-                                            <button type="submit"><i className="ti-arrow-right"></i></button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
