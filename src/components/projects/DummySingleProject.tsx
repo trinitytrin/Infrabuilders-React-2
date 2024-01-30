@@ -49,7 +49,7 @@ const DummySingleProject = () => {
                                     <li><span>Client:</span> <span>{project?.client}</span></li>
                                     <li><span>Date:</span>{project?.start_date}</li>
                                     <li><span>Link: </span><a href={project?.video_link} target="_blank" rel="noopener noreferrer">Live Demo<i className="ti-arrow-top-right"></i></a></li>
-                                    <li><span>Download: </span><a href="#" target="_blank" rel="noopener noreferrer">pdf link <i className="ti-download"></i></a></li>
+                                    <li><span>Download: </span><a href={project.download_link} target="_blank" rel="noopener noreferrer" download={project.title} >PDF link <i className="ti-download"></i></a></li>
 
                                 </ul>
                             </div>
