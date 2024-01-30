@@ -9,12 +9,11 @@ const ShowcaseHome = () => {
                 <div className="portfolio-content">
                     <div className="portfolio-filter-wrap text-center">
                         <ul className="portfolio-filter">
-                            <li className="active"><a href="#" data-filter="*"> All</a></li>
-                            <li><a href="#" data-filter=".cat-1">Programming</a></li>
-                            <li><a href="#" data-filter=".cat-3">illustration</a></li>
-                            <li><a href="#" data-filter=".cat-2">WordPress</a></li>
-                            <li><a href="#" data-filter=".cat-4">Photography</a></li>
-                            <li><a href="#" data-filter=".cat-5">Development</a></li>
+                            <li className="active"><a href="#" data-filter="*"> All Highlights</a></li>
+                            <li><a href="#" data-filter=".cat-1">Projects</a></li>
+                            <li><a href="#" data-filter=".cat-3">Products</a></li>
+                            <li><a href="#" data-filter=".cat-2">Solutions</a></li>
+
                         </ul>
                     </div>
                     <div className="portfolio portfolio-gutter portfolio-style-1 portfolio-masonry portfolio-not-full portfolio-3-column">

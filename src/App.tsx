@@ -1,5 +1,5 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
@@ -68,31 +68,33 @@ function App() {
 
 
 
-      <Routes>
-        <Route path="/" element={<Layout />} errorElement={<ErrorPage />}>
-          <Route path="" index={true} element={<Home />} />
-          <Route path="*" element={<ErrorPage />} />
-          <Route path="about" element={<About />} />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />} errorElement={<ErrorPage />}>
+            <Route path="" index={true} element={<Home />} />
+            <Route path="*" element={<ErrorPage />} />
+            <Route path="about" element={<About />} />
 
-          <Route path="services" element={<Services />} >
-            <Route path="" element={<ServicesLanding />} />
-            <Route path="design" element={<Design />}>
-              <Route path="" element={<DesignLanding />} />
-              <Route path="architectural" element={<ArchitecturalDesign />} />
+            <Route path="services" element={<Services />} >
+              <Route path="" element={<ServicesLanding />} />
+              <Route path="design" element={<Design />}>
+                <Route path="" element={<DesignLanding />} />
+                <Route path="architectural" element={<ArchitecturalDesign />} />
+              </Route>
             </Route>
+
+            <Route path="projects" element={<Projects />} >
+              <Route path="" element={<ProjectsLanding />} />
+              <Route path=":id" element={<ProjectDetails />} />
+              {/* <Route path="projectId" element={<SingleProject project={selectedProject} />} /> */}
+            </Route>
+
+            <Route path="download" element={<Download />} />
+            <Route path="contact" element={<Contact />} />
           </Route>
 
-          <Route path="projects" element={<Projects />} >
-            <Route path="" element={<ProjectsLanding />} />
-            <Route path=":id" element={<ProjectDetails />} />
-            {/* <Route path="projectId" element={<SingleProject project={selectedProject} />} /> */}
-          </Route>
-
-          <Route path="download" element={<Download />} />
-          <Route path="contact" element={<Contact />} />
-        </Route>
-
-      </Routes>
+        </Routes>
+      </BrowserRouter>
 
 
 
