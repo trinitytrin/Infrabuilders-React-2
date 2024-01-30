@@ -9,7 +9,7 @@ interface Props {
 const SingleProjectBox = ({ project }: Props) => {
     return (
 
-        <div className="portfolio-item">
+        <div className="portfolio-item col-md-4 col-sm-6">
             <div className="portfolio-item-content">
                 <div className="item-thumbnail-custom">
                     <img src={project.image_url[0]} alt="" />

@@ -31,7 +31,7 @@ const ProjectBox = () => {
 
                     <div className="row">
 
-                        <div className="portfolio portfolio-gutter portfolio-style-2 portfolio-masonry portfolio-not-full portfolio-3-column">
+                        <div className="portfolio portfolio-gutter portfolio-style-2 portfolio-masonry portfolio-not-full">
 
                             {projects.map(p => (
                                 <SingleProjectBox key={p.id} project={p} />

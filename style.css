@@ -2341,6 +2341,7 @@ blockquote {
 .single-member-wrapper {
     overflow: hidden;
     position: relative;
+    margin-bottom: 10pt;
 }
 
 .member-details {

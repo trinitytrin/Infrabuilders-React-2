@@ -21,6 +21,6 @@ export interface Project {
 
 }
 
-const useProjects = () => ({data: projects, isLoading: false, error: null});
+const useProjects = () => ({data: projects as Project[], isLoading: false, error: null});
 
 export default useProjects;
