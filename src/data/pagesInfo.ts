@@ -35,13 +35,24 @@ export const pagesInfo = [
 
     
 
-    {id: 7, title:'Products', path: '/services/products'},
-    {id: 8, title:'Solutions', path: '/services/solutions'},
-    {id: 9, title:'Maintenance', path: '/servies/maintenance'},
+    {id: 7, 
+        title:'Products', 
+        path: '/services/products', 
+        subtitle: 'Write some subtitle for Products Page'},
+
+    {id: 8, 
+        title:'Solutions', 
+        path: '/services/solutions',
+        subtitle: 'Write some subtitle for Solutions Page'},
+
+    {id: 9,
+        title:'Maintenance',
+        path: '/services/maintenance',
+        subtitle: 'Write some subtitle for Maintenance Page'},
 
     {id: 10, 
         title:'Architectural Design', 
-        path: '/services/design/architectural',
+        path: '/services/design/architectural-design',
         subtitle: 'Write some subtitle for Architectural Design Page'},
         
     {id: 11, 
@@ -53,6 +64,32 @@ export const pagesInfo = [
         title:'Project Details', 
         path: '/projects/project-:id',
         subtitle: `Gather detailed information about our each project`},
+
+    {id: 13, 
+        title:'Engineering Design', 
+        path: '/services/design/engineering-design',
+        subtitle: 'Write some subtitle for Engineering Design Page'},
+
+    {id: 14, 
+        title:'Process Design', 
+        path: '/services/design/process-design',
+        subtitle: 'Write some subtitle for Process Design Page'},
+
+    {id: 15, 
+        title:'Product Design', 
+        path: '/services/design/product-design',
+        subtitle: 'Write some subtitle for Product Design Page'},
+
+    {id: 16, 
+        title:'Operating Procedure Design', 
+        path: '/services/design/operating-procedure-design',
+        subtitle: 'Write some subtitle for Operating Procedure Design Page'},
+
+    {id: 17, 
+        title:'Implementation and Supply', 
+        path: '/services/implementation-and-supply',
+        subtitle: 'Write some subtitle for Implementation and Supply Page'},
+                    
             
 
 ];

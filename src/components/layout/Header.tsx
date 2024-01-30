@@ -31,16 +31,16 @@ const Header = () => {
                       <ul>
                         <li><Link to={'/services/design'} className="nav-link">Design <span><i className="fa fa-angle-down"></i></span></Link>
                           <ul>
-                            <li><Link to={'/services/design/architectural'}>Architectural </Link></li>
-                            <li><a href="infra-engineeringDesign.html">Engineering </a></li>
-                            <li><a href="infra-processDesign.html">Process Design</a></li>
-                            <li><a href="infra-productDesign.html">Product Design </a></li>
-                            <li><a href="infra-operatingprocedureDesign.html">Operating Procedure Design </a></li>
+                            <li><Link to={'/services/design/architectural-design'}>Architectural </Link></li>
+                            <li><Link to={'/services/design/engineering-design'}>Engineering </Link></li>
+                            <li><Link to={'/services/design/process-design'}>Process Design</Link></li>
+                            <li><Link to={'/services/design/product-design'}>Product Design </Link></li>
+                            <li><Link to={'/services/design/operational-procedure-design'}>Operating Procedure Design </Link></li>
 
                           </ul>
                         </li>
-                        <li><a href="infra-implementationsupply.html">Implementations and Supply </a></li>
-                        <li><a href="infra-maintenance.html">Maintenance </a></li>
+                        <li><Link to={'/services/implementation-and-supply'} className="nav-link">Implementations and Supply </Link></li>
+                        <li><Link to={'/services/maintenance'} className="nav-link">Maintenance </Link></li>
                         <li><a href="#">Products </a></li>
                         <li><a href="#">Solutions </a></li>
 
@@ -64,7 +64,7 @@ const Header = () => {
                 <nav className="xboot-mobile-menu">
                   <ul>
                     <li><a href="/">Home</a></li>
-                    <li><Link to={'about'} >About</Link></li>
+                    <li><Link to={'/about'} >About</Link></li>
 
                     <li><Link to={'/services'} >Services</Link>
                       <ul>

@@ -1,13 +1,11 @@
-import { Link, useLocation, useParams } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import { pagesInfo } from '../../data/pagesInfo';
 
 const BreadCrumb = () => {
 
     const location = useLocation();
-    const params = useParams();
 
-    console.log(location);
-    console.log(params);
+
 
     const pages = location.pathname.trim().split('/')
         .filter(e => e.length >= 1)
@@ -22,8 +20,7 @@ const BreadCrumb = () => {
         console.log('true');
         thisPage = pagesInfo.find(p => p.title === 'Project Details')
     }
-    //console.log(thisPage);
-    //console.log(pages);
+
 
 
     return (

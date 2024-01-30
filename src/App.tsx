@@ -19,6 +19,12 @@ import ProjectsLanding from './pages/ProjectsLanding';
 
 import ProjectDetails from './pages/ProjectDetails';
 import Layout from './routing/Layout';
+import EngineeringDesign from './pages/EngineeringDesign';
+import ProcessDesign from './pages/ProcessDesign';
+import ProductDesign from './pages/ProductDesign';
+import OperatingProcedureDesign from './pages/OperatingProcedureDesign';
+import ImplementationSupply from './pages/ImplementationSupply';
+import Maintenance from './pages/Maintenance';
 //import { Project, projects } from './data/projectsInfo';
 
 //import { useEffect } from 'react';
@@ -79,8 +85,14 @@ function App() {
               <Route path="" element={<ServicesLanding />} />
               <Route path="design" element={<Design />}>
                 <Route path="" element={<DesignLanding />} />
-                <Route path="architectural" element={<ArchitecturalDesign />} />
+                <Route path="architectural-design" element={<ArchitecturalDesign />} />
+                <Route path="engineering-design" element={<EngineeringDesign />} />
+                <Route path="process-design" element={<ProcessDesign />} />
+                <Route path="product-design" element={<ProductDesign />} />
+                <Route path="operating-procedure-design" element={<OperatingProcedureDesign />} />
               </Route>
+              <Route path="implementation-and-supply" element={<ImplementationSupply />} />
+              <Route path="maintenance" element={<Maintenance />} />
             </Route>
 
             <Route path="projects" element={<Projects />} >

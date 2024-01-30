@@ -16,7 +16,7 @@ const SingleDesign = ({ design }: Props) => {
     return (
         <div className="col-md-4 col-sm-6 post-grid">
             <article className="grid-blog-post">
-                <div className="post-thumbnail">
+                <div className="post-thumbnail-custom">
                     <Link to={design.path}><img src={design.imgPath} alt={design.title + 'Image'} /></Link>
                 </div>
                 <div className="post-content">
