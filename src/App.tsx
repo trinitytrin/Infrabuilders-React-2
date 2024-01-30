@@ -70,7 +70,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Layout />} errorElement={<ErrorPage />}>
-          <Route path="" element={<Home />} />
+          <Route path="" index={true} element={<Home />} />
           <Route path="*" element={<ErrorPage />} />
           <Route path="about" element={<About />} />
 
