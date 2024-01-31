@@ -62,7 +62,7 @@ export const pagesInfo = [
 
     {id: 12, 
         title:'Project Details', 
-        path: '/projects/project-:id',
+        path: '/projects/:id',
         subtitle: `Gather detailed information about our each project`},
 
     {id: 13, 
@@ -89,6 +89,16 @@ export const pagesInfo = [
         title:'Implementation and Supply', 
         path: '/services/implementation-and-supply',
         subtitle: 'Write some subtitle for Implementation and Supply Page'},
+
+    {id: 18, 
+        title:'Product Details', 
+        path: 'services/products/:id',
+        subtitle: `Learn detailed information about our each product`},
+            
+    {id: 19, 
+        title:'Solution Details', 
+        path: 'services/solutions/:id',
+        subtitle: `Learn detailed information about our each solution`},
                     
             
 

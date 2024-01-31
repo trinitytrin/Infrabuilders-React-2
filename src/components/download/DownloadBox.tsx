@@ -30,7 +30,7 @@ const DownloadBox = () => {
                                 <div className="panel panel-default">
                                     <div className="panel-heading" role="tab">
                                         <h4 className="panel-title">
-                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-controls="collapseOne">Download Project Brochures</a>
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Download Project Brochures</a>
                                         </h4>
                                     </div>
                                     <div id="collapseOne" className="panel-collapse collapse" role="tabpanel">

@@ -1,6 +1,6 @@
 import projects from '../data/projectsInfo';
 
-interface UsedProducts{
+export interface UsedProducts{
     name: string;
     url: string;
 }

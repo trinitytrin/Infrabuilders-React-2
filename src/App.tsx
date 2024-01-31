@@ -25,6 +25,12 @@ import ProductDesign from './pages/ProductDesign';
 import OperatingProcedureDesign from './pages/OperatingProcedureDesign';
 import ImplementationSupply from './pages/ImplementationSupply';
 import Maintenance from './pages/Maintenance';
+import Solutions from './pages/Solutions';
+import SolutionsLanding from './pages/SolutionsLanding';
+import SolutionDetails from './pages/SolutionDetails';
+import Products from './pages/Products';
+import ProductsLanding from './pages/ProductsLanding';
+import ProductDetails from './pages/ProductDetails';
 //import { Project, projects } from './data/projectsInfo';
 
 //import { useEffect } from 'react';
@@ -93,12 +99,19 @@ function App() {
               </Route>
               <Route path="implementation-and-supply" element={<ImplementationSupply />} />
               <Route path="maintenance" element={<Maintenance />} />
+              <Route path="solutions" element={<Solutions />}>
+                <Route path="" element={<SolutionsLanding />} />
+                <Route path=":id" element={<SolutionDetails />} />
+              </Route>
+              <Route path="products" element={<Products />}>
+                <Route path="" element={<ProductsLanding />} />
+                <Route path=":id" element={<ProductDetails />} />
+              </Route>
             </Route>
 
             <Route path="projects" element={<Projects />} >
               <Route path="" element={<ProjectsLanding />} />
               <Route path=":id" element={<ProjectDetails />} />
-              {/* <Route path="projectId" element={<SingleProject project={selectedProject} />} /> */}
             </Route>
 
             <Route path="download" element={<Download />} />

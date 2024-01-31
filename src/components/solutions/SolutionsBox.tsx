@@ -1,12 +1,11 @@
 
-import { useState } from "react";
-import useProjects from "../../hooks/useProjects";
-import SingleProjectBox from "./SingleProjectBox";
+import { useState } from 'react';
+import useSolutions from '../../hooks/useSolutions';
+import SingleSolutionBox from './SingleSolutionBox';
 
-
-const ProjectBox = () => {
-    const { data } = useProjects();
-    const [projects, setProjects] = useState(data);
+const SolutionsBox = () => {
+    const { data } = useSolutions();
+    const [solutions, setSolutions] = useState(data);
     return (
 
         <div className="xboot-standard-row white-bg service-section">
@@ -14,7 +13,7 @@ const ProjectBox = () => {
                 <div className="row">
                     <div className="col-xs-12">
                         <div className="section-title text-center">
-                            <h2 className="area-title">Our Projects</h2>
+                            <h2 className="area-title">Our Solutions</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi tempora veritatis nemo aut ea iusto eos est expedita, quas ab adipisci.</p>
                         </div>
                     </div>
@@ -22,10 +21,10 @@ const ProjectBox = () => {
                 <div className="portfolio-content">
                     <div className="portfolio-filter-wrap text-center">
                         <ul className="portfolio-filter">
-                            <li className="active"><a href="#" data-filter="*" onClick={() => setProjects(data)}> All</a></li>
-                            <li><a href="#" data-filter=".cat-1" onClick={() => setProjects(data.filter(p => p.status === 'completed'))} >Completed</a></li>
-                            <li><a href="#" data-filter=".cat-2" onClick={() => setProjects(data.filter(p => p.status === 'ongoing'))}>Ongoing</a></li>
-                            <li><a href="#" data-filter=".cat-3" onClick={() => setProjects(data.filter(p => p.status === 'upcoming'))}>Upcoming</a></li>
+                            <li className="active"><a href="#" data-filter="*" onClick={() => setSolutions(data)}> All</a></li>
+                            <li><a href="#" data-filter=".cat-1" onClick={() => setSolutions(data.filter(p => p.status === 'completed'))} >Completed</a></li>
+                            <li><a href="#" data-filter=".cat-2" onClick={() => setSolutions(data.filter(p => p.status === 'ongoing'))}>Ongoing</a></li>
+                            <li><a href="#" data-filter=".cat-3" onClick={() => setSolutions(data.filter(p => p.status === 'upcoming'))}>Upcoming</a></li>
                         </ul>
                     </div>
 
@@ -33,8 +32,8 @@ const ProjectBox = () => {
 
                         <div className="portfolio portfolio-gutter portfolio-style-2 portfolio-masonry portfolio-not-full">
 
-                            {projects.map(p => (
-                                <SingleProjectBox key={p.id} project={p} />
+                            {solutions.map(s => (
+                                <SingleSolutionBox key={s.id} solution={s} />
 
                             ))}
 
@@ -56,4 +55,4 @@ const ProjectBox = () => {
     )
 }
 
-export default ProjectBox;
+export default SolutionsBox;

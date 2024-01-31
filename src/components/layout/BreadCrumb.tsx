@@ -20,7 +20,16 @@ const BreadCrumb = () => {
         console.log('true');
         thisPage = pagesInfo.find(p => p.title === 'Project Details')
     }
-
+    const productRegex = new RegExp(/\/services\/products\/\d/);
+    if (productRegex.test(location.pathname)) {
+        console.log('true');
+        thisPage = pagesInfo.find(p => p.title === 'Product Details')
+    }
+    const solutionRegex = new RegExp(/\/services\/solutions\/\d/);
+    if (solutionRegex.test(location.pathname)) {
+        console.log('true');
+        thisPage = pagesInfo.find(p => p.title === 'Solution Details')
+    }
 
 
     return (

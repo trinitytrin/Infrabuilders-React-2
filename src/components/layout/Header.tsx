@@ -41,8 +41,9 @@ const Header = () => {
                         </li>
                         <li><Link to={'/services/implementation-and-supply'} className="nav-link">Implementations and Supply </Link></li>
                         <li><Link to={'/services/maintenance'} className="nav-link">Maintenance </Link></li>
-                        <li><a href="#">Products </a></li>
-                        <li><a href="#">Solutions </a></li>
+                        <li><Link to={'/services/products'} className="nav-link">Products </Link></li>
+                        <li><Link to={'/services/solutions'} className="nav-link">Solutions </Link></li>
+
 
                       </ul>
                     </li>
