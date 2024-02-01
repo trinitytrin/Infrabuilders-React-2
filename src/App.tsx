@@ -97,7 +97,7 @@ function App() {
                 <Route path="product-design" element={<ProductDesign />} />
                 <Route path="operating-procedure-design" element={<OperatingProcedureDesign />} />
               </Route>
-              <Route path="implementation-and-supply" element={<ImplementationSupply />} />
+              <Route path="implementations-and-supply" element={<ImplementationSupply />} />
               <Route path="maintenance" element={<Maintenance />} />
               <Route path="solutions" element={<Solutions />}>
                 <Route path="" element={<SolutionsLanding />} />

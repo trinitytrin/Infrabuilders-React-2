@@ -29,20 +29,20 @@ const Header = () => {
 
                     <li><NavLink to={'/services'} className="nav-link">Services <span><i className="fa fa-angle-down"></i></span></NavLink>
                       <ul>
-                        <li><Link to={'/services/design'} className="nav-link">Design <span><i className="fa fa-angle-down"></i></span></Link>
+                        <li><NavLink to={'/services/design'} className="nav-link">Design <span><i className="fa fa-angle-down"></i></span></NavLink>
                           <ul>
-                            <li><Link to={'/services/design/architectural-design'}>Architectural </Link></li>
-                            <li><Link to={'/services/design/engineering-design'}>Engineering </Link></li>
-                            <li><Link to={'/services/design/process-design'}>Process Design</Link></li>
-                            <li><Link to={'/services/design/product-design'}>Product Design </Link></li>
-                            <li><Link to={'/services/design/operational-procedure-design'}>Operating Procedure Design </Link></li>
+                            <li><NavLink to={'/services/design/architectural-design'}>Architectural </NavLink></li>
+                            <li><NavLink to={'/services/design/engineering-design'}>Engineering </NavLink></li>
+                            <li><NavLink to={'/services/design/process-design'}>Process Design</NavLink></li>
+                            <li><NavLink to={'/services/design/product-design'}>Product Design </NavLink></li>
+                            <li><NavLink to={'/services/design/operational-procedure-design'}>Operating Procedure Design </NavLink></li>
 
                           </ul>
                         </li>
-                        <li><Link to={'/services/implementation-and-supply'} className="nav-link">Implementations and Supply </Link></li>
-                        <li><Link to={'/services/maintenance'} className="nav-link">Maintenance </Link></li>
-                        <li><Link to={'/services/products'} className="nav-link">Products </Link></li>
-                        <li><Link to={'/services/solutions'} className="nav-link">Solutions </Link></li>
+                        <li><NavLink to={'/services/implementations-and-supply'} className="nav-link">Implementations and Supply </NavLink></li>
+                        <li><NavLink to={'/services/maintenance'} className="nav-link">Maintenance </NavLink></li>
+                        <li><NavLink to={'/services/products'} className="nav-link">Products </NavLink></li>
+                        <li><NavLink to={'/services/solutions'} className="nav-link">Solutions </NavLink></li>
 
 
                       </ul>
@@ -64,30 +64,32 @@ const Header = () => {
               <div className="col-sm-12">
                 <nav className="xboot-mobile-menu">
                   <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><Link to={'/about'} >About</Link></li>
+                    <li><NavLink to={'/'}>Home</NavLink></li>
+                    <li><NavLink to={'/about'} >About</NavLink></li>
 
-                    <li><Link to={'/services'} >Services</Link>
-                      <ul>
-                        <li><a href="infra-design.html">Design </a>
-                          <ul>
-                            <li><a href="infra-architecturalDesign.html">Architectural </a></li>
-                            <li><a href="infra-engineeringDesign.html">Engineering </a></li>
-                            <li><a href="infra-processDesign.html">Process Design</a></li>
-                            <li><a href="infra-productDesign.html">Product Design </a></li>
-                            <li><a href="infra-operatingprocedureDesign.html">Operating Procedure Design </a></li>
+                    <li><NavLink to={'/services'} >Services</NavLink>
+                      <ul className="dropdown-show-right">
+                        <li><NavLink to={'/services/design'} >Design </NavLink>
+                          <ul className="dropdown-show-right">
+                            <li><NavLink to={'/services/design/architectural-design'}>Architectural </NavLink></li>
+                            <li><NavLink to={'/services/design/engineering-design'}>Engineering </NavLink></li>
+                            <li><NavLink to={'/services/design/process-design'}>Process Design</NavLink></li>
+                            <li><NavLink to={'/services/design/product-design'}>Product Design </NavLink></li>
+                            <li><NavLink to={'/services/design/operational-procedure-design'}>Operating Procedure Design </NavLink></li>
+
                           </ul>
                         </li>
-                        <li><a href="infra-implementationsupply.html">Implementations and Supply </a></li>
-                        <li><a href="infra-maintenance.html">Maintenance </a></li>
-                        <li><a href="#">Products </a></li>
-                        <li><a href="#">Solutions </a></li>
+                        <li><NavLink to={'/services/implementations-and-supply'} className="nav-link">Implementations and Supply </NavLink></li>
+                        <li><NavLink to={'/services/maintenance'} className="nav-link">Maintenance </NavLink></li>
+                        <li><NavLink to={'/services/products'} className="nav-link">Products </NavLink></li>
+                        <li><NavLink to={'/services/solutions'} className="nav-link">Solutions </NavLink></li>
+
                       </ul>
                     </li>
 
-                    <li><Link to={'/projects'} >Projects</Link></li>
-                    <li><Link to={'/download'} >Download</Link></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <li><NavLink to={'/projects'} >Projects</NavLink></li>
+                    <li><NavLink to={'/download'} >Download</NavLink></li>
+                    <li><NavLink to={'/contact'}>Contact</NavLink></li>
 
                   </ul>
                 </nav>

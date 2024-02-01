@@ -5,7 +5,7 @@ import useDocumentTitle from "../hooks/useDocumentTitle";
 
 
 const ImplementationSupply = () => {
-    useDocumentTitle('Implementation and Supply');
+    useDocumentTitle('Implementations and Supply');
 
     const { data } = useBlogPages();
     const page = data.find(p => p.slug === 'implementation-and-supply');

@@ -86,8 +86,8 @@ export const pagesInfo = [
         subtitle: 'Write some subtitle for Operating Procedure Design Page'},
 
     {id: 17, 
-        title:'Implementation and Supply', 
-        path: '/services/implementation-and-supply',
+        title:'Implementations and Supply', 
+        path: '/services/implementations-and-supply',
         subtitle: 'Write some subtitle for Implementation and Supply Page'},
 
     {id: 18, 
