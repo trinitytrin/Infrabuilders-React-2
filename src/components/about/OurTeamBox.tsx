@@ -18,7 +18,7 @@ const OurTeamBox = () => {
                 <div className="row">
 
                     {data.map(member => (
-                        <TeamMemberBox member={member} />
+                        <TeamMemberBox key={member.id} member={member} />
                     ))}
 
                 </div>

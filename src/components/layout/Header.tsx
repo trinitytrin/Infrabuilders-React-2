@@ -1,6 +1,6 @@
 
 import { Link, NavLink } from "react-router-dom";
-
+import logo from '/img/logo/1.png';
 
 const Header = () => {
   return (
@@ -11,7 +11,7 @@ const Header = () => {
           <div className="row">
             <div className="col-md-2  col-sm-2 col-xs-3">
               <div className="logo">
-                <Link to={'/'} className="nav-link"><img src='img/logo/1.png' alt="logo" /></Link>
+                <Link to={'/'} className="nav-link"><img src={logo} alt="logo" /></Link>
               </div>
             </div>
             <div className="col-md-10 col-sm-10 hidden-xs hidden-sm">

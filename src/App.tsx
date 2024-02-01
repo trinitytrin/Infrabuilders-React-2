@@ -1,11 +1,13 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import './App.css';
+import '../style.css';
+import '../public/css/responsive.css';
+import '../public/css/elements.css';
+import '../public/css/custom.css';
+
 import Home from './pages/Home';
 import Contact from './pages/Contact';
-// import Loader from './components/layout/Loader';
-// import Header from './components/layout/Header';
-// import Footer from './components/layout/Footer';
 import About from './pages/About';
 import Services from './pages/Services';
 import Design from './pages/Design';
@@ -130,7 +132,7 @@ function App() {
         <script src='/js/modernizr-2.8.3.min.js' ></script>
         <script src='/js/plugins.js' type='module' async></script>
         <script src='/js/main.js'  ></script>
-        <script src="js/ajax-mail.js" type='module'></script>
+        <script src="/js/ajax-mail.js" type='module'></script>
 
       </Helmet >
 
