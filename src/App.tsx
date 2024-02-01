@@ -126,8 +126,8 @@ function App() {
 
         <link rel="stylesheet" href="/css/elements.css" />
         <link rel="stylesheet" href="/style.css" />
-        <link rel="stylesheet" href="/css/responsive.css" />
-        <link rel="stylesheet" href="/css/custom.css" />
+        <link rel="stylesheet" href="css/responsive.css" />
+        <link rel="stylesheet" href="css/custom.css" />
         <link rel="stylesheet" href="/src/App.css" />
       </Helmet >
 
