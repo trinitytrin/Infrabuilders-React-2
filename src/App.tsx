@@ -1,13 +1,11 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import './App.css';
-import '../style.css';
-import '../public/css/responsive.css';
-import '../public/css/elements.css';
-import '../public/css/custom.css';
+
+
 
 import Home from './pages/Home';
 import Contact from './pages/Contact';
+
 import About from './pages/About';
 import Services from './pages/Services';
 import Design from './pages/Design';
@@ -76,11 +74,7 @@ function App() {
 
   return (
 
-
     <HelmetProvider>
-
-
-
 
       <BrowserRouter>
         <Routes>
@@ -124,22 +118,20 @@ function App() {
       </BrowserRouter>
 
 
-
-
-
-
       <Helmet>
         <script src='/js/modernizr-2.8.3.min.js' ></script>
-        <script src='/js/plugins.js' type='module' async></script>
+        <script src='/js/plugins.js' type='module' ></script>
         <script src='/js/main.js'  ></script>
-        <script src="/js/ajax-mail.js" type='module'></script>
+        <script src="js/ajax-mail.js" type='module'></script>
 
+        <link rel="stylesheet" href="/css/elements.css" />
+        <link rel="stylesheet" href="/style.css" />
+        <link rel="stylesheet" href="/css/responsive.css" />
+        <link rel="stylesheet" href="/css/custom.css" />
+        <link rel="stylesheet" href="/src/App.css" />
       </Helmet >
 
-
     </HelmetProvider >
-
-
 
   )
 }
