@@ -1,4 +1,4 @@
-// import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 
 
@@ -32,12 +32,11 @@ import Products from './pages/Products';
 import ProductsLanding from './pages/ProductsLanding';
 import ProductDetails from './pages/ProductDetails';
 
-
-
 import '../style.css';
 import '../public/css/responsive.css';
 import '../public/css/custom.css';
-import { HelmetProvider, Helmet } from 'react-helmet-async';
+import './App.css';
+
 
 
 
