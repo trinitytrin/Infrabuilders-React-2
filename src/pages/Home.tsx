@@ -7,6 +7,11 @@ import ShowcaseHome from "../components/home/ShowcaseHome";
 import WorkProgressBar from "../components/home/WorkProgressBar";
 
 
+import '../../public/css/elements.css';
+import '../../style.css';
+import '../../public/css/responsive.css';
+import '../../public/css/custom.css';
+
 const Home = () => {
     return (
         <>

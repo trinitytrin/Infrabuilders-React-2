@@ -33,7 +33,7 @@ import ProductsLanding from './pages/ProductsLanding';
 import ProductDetails from './pages/ProductDetails';
 
 
-import '../public/css/elements.css';
+
 import '../style.css';
 import '../public/css/responsive.css';
 import '../public/css/custom.css';
@@ -94,7 +94,7 @@ function App2() {
                 <script src='/js/modernizr-2.8.3.min.js' ></script>
                 <script src='/js/plugins.js' type='module' ></script>
                 <script src='/js/main.js'  ></script>
-                <script src="js/ajax-mail.js" type='module'></script>
+                <script src="/js/ajax-mail.js" type='module'></script>
 
             </Helmet >
 
