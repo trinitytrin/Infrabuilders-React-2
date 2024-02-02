@@ -34,9 +34,7 @@ import ProductDetails from './pages/ProductDetails';
 
 
 
-import '../style.css';
-import '../public/css/responsive.css';
-import '../public/css/custom.css';
+
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 
