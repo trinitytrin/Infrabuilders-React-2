@@ -5,16 +5,14 @@ import ClientTestimonial from "../components/home/testimonial/ClientTestimonial"
 import Counter from "../components/home/Counter";
 import ShowcaseHome from "../components/home/ShowcaseHome";
 import WorkProgressBar from "../components/home/WorkProgressBar";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 
-import '../../public/css/elements.css';
-import '../../style.css';
-import '../../public/css/responsive.css';
-import '../../public/css/custom.css';
+
 
 const Home = () => {
     return (
-        <>
+        <HelmetProvider>
             <BannerHome />
             <div className="content">
                 <ShowcaseHome />
@@ -25,7 +23,14 @@ const Home = () => {
             </div>
 
 
-        </>
+            <Helmet>
+
+                <script src='/js/plugins.js' type='module' ></script>
+                <script src='/js/main.js'  ></script>
+
+            </Helmet >
+
+        </HelmetProvider >
     )
 }
 

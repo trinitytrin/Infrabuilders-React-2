@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import BreadCrumb from "../components/layout/BreadCrumb";
 import DummySingleProject from "../components/projects/DummySingleProject";
 import useDocumentTitle from "../hooks/useDocumentTitle";
-
+import '../../public/css/elements.css';
 
 
 const ProjectDetails = () => {

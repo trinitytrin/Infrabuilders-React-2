@@ -5,7 +5,7 @@ import ContactInfoWidget from "../components/contact/ContactInfoWidget";
 import ContactMap from "../components/contact/ContactMap";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 
-
+import '../../public/css/elements.css';
 
 const Contact = () => {
     useDocumentTitle('Contact');
