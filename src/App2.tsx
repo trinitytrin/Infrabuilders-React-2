@@ -32,9 +32,7 @@ import Products from './pages/Products';
 import ProductsLanding from './pages/ProductsLanding';
 import ProductDetails from './pages/ProductDetails';
 
-import '../style.css';
-import '../public/css/responsive.css';
-import '../public/css/custom.css';
+
 import './App.css';
 
 
@@ -46,6 +44,14 @@ function App2() {
 
     return (
         <HelmetProvider>
+            <Helmet>
+                <link rel="stylesheet" href="/css/elements.css" />
+                <link rel="stylesheet" href="/style.css" />
+                <link rel="stylesheet" href="/css/responsive.css" />
+                <link rel="stylesheet" href="/css/custom.css" />
+
+                <script src='/js/modernizr-2.8.3.min.js' ></script>
+            </Helmet>
 
             <BrowserRouter>
                 <Routes>
@@ -90,11 +96,9 @@ function App2() {
 
 
             <Helmet>
-                <script src='/js/modernizr-2.8.3.min.js' ></script>
                 <script src='/js/plugins.js' type='module' ></script>
                 <script src='/js/main.js'  ></script>
                 <script src="/js/ajax-mail.js" type='module'></script>
-
             </Helmet >
 
         </HelmetProvider >

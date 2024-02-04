@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 
 
-
-
 const WorkProgressBar = () => {
     return (
 

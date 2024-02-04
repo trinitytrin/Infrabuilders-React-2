@@ -3,7 +3,6 @@ import BreadCrumb from "../components/layout/BreadCrumb";
 import useBlogPages from "../hooks/useBlogPages";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 
-import '../../public/css/elements.css';
 const EngineeringDesign = () => {
     useDocumentTitle('Engineering Design');
 

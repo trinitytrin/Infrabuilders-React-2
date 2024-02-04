@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 
-import '../../public/css/elements.css';
+
 
 
 

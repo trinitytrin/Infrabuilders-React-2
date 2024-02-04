@@ -2,7 +2,7 @@ import BlogPageDetails from "../components/blogpages/BlogPageDetails";
 import BreadCrumb from "../components/layout/BreadCrumb";
 import useBlogPages from "../hooks/useBlogPages";
 import useDocumentTitle from "../hooks/useDocumentTitle";
-import '../../public/css/elements.css';
+
 
 const ProcessDesign = () => {
     useDocumentTitle('Process Design');
