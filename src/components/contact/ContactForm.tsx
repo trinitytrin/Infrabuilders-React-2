@@ -39,7 +39,7 @@ type FormData = z.infer<typeof schema>;
 
 const ContactForm = () => {
     //const navigate = useNavigate();
-    const { register, reset, handleSubmit, watch, formState: { errors, isSubmitSuccessful } } = useForm<FormData>({ resolver: zodResolver(schema) });
+    const { register, reset, handleSubmit, watch, formState: { errors } } = useForm<FormData>({ resolver: zodResolver(schema) });
 
     const serviceTime = ['Right Away', 'In 3 Months', 'In 6 Months', 'In 1 Year', 'Just Asking'];
 
@@ -49,19 +49,17 @@ const ContactForm = () => {
     const contactName = watch('name');
 
 
-    const onSubmit: SubmitHandler<FormData> = (data, e) => {
-        console.log(data);
+    const onSubmit: SubmitHandler<FormData> = (_data, e) => {
+        // console.log(data);
         e?.target.submit();
-        if (isSubmitSuccessful) {
-            alert('Your request was submitted successfully.\n Thanks!');
-            reset();
+        // if (isSubmitSuccessful) {
+        //     alert('Your request was submitted successfully.\n Thanks!');
+        reset();
 
-            //navigate('/index.html');
-
-        }
-        else {
-            alert("Oops! There was some error in submitting the form.\nPlease try again!")
-        }
+        // }
+        // else {
+        //     alert("Oops! There was some error in submitting the form.\nPlease try again!")
+        // }
 
     }
     const onError = (errors, e) => console.log(errors, e);
