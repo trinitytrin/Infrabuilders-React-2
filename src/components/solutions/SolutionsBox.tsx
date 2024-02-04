@@ -51,10 +51,10 @@ const SolutionsBox = () => {
                 <div className="portfolio-content">
                     <div className="portfolio-filter-wrap text-center">
                         <ul className="portfolio-filter">
-                            <li className={(isActive[0].value) ? "active" : ''}><a href="#" onClick={() => handleClick('all')}> All</a></li>
-                            <li><a href="#" className={(isActive[1].value) ? "active" : ''} onClick={() => handleClick('completed')} >Completed</a></li>
-                            <li><a href="#" className={(isActive[2].value) ? "active" : ''} onClick={() => handleClick('ongoing')}>Ongoing</a></li>
-                            <li><a href="#" className={(isActive[3].value) ? "active" : ''} onClick={() => handleClick('upcoming')}>Upcoming</a></li>
+                            <li className={(isActive[0].value) ? "active" : ''}><a href="" onClick={() => handleClick('all')}> All</a></li>
+                            <li><a href="" onClick={() => handleClick('completed')} className={(isActive[1].value) ? "active" : ''} >Completed</a></li>
+                            <li><a href="" onClick={() => handleClick('ongoing')} className={(isActive[2].value) ? "active" : ''}>Ongoing</a></li>
+                            <li><a href="" onClick={() => handleClick('upcoming')} className={(isActive[3].value) ? "active" : ''}>Upcoming</a></li>
                         </ul>
                     </div>
 

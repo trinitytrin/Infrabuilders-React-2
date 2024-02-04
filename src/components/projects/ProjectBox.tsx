@@ -7,6 +7,38 @@ import SingleProjectBox from "./SingleProjectBox";
 const ProjectBox = () => {
     const { data } = useProjects();
     const [projects, setProjects] = useState(data);
+
+    const activeArray = [
+        {
+            field: 'all',
+            value: true
+        },
+        {
+            field: 'completed',
+            value: false
+        },
+        {
+            field: 'ongoing',
+            value: false
+        },
+        {
+            field: 'upcoming',
+            value: false
+        },
+    ];
+    const [isActive, setIsActive] = useState(activeArray);
+    const handleClick = (cat: string) => {
+        setIsActive(activeArray.map(item => (item.field === cat) ? { ...item, value: true } : { ...item, value: false }));
+        if (cat === 'all')
+            setProjects(data);
+        else
+            setProjects(data.filter(p => p.status === cat));
+
+        console.log(isActive);
+
+    }
+
+
     return (
 
         <div className="xboot-standard-row white-bg service-section">
@@ -22,10 +54,10 @@ const ProjectBox = () => {
                 <div className="portfolio-content">
                     <div className="portfolio-filter-wrap text-center">
                         <ul className="portfolio-filter">
-                            <li className="active"><a href="#" data-filter="*" onClick={() => setProjects(data)}> All</a></li>
-                            <li><a href="#" data-filter=".cat-1" onClick={() => setProjects(data.filter(p => p.status === 'completed'))} >Completed</a></li>
-                            <li><a href="#" data-filter=".cat-2" onClick={() => setProjects(data.filter(p => p.status === 'ongoing'))}>Ongoing</a></li>
-                            <li><a href="#" data-filter=".cat-3" onClick={() => setProjects(data.filter(p => p.status === 'upcoming'))}>Upcoming</a></li>
+                            <li className={(isActive[0].value) ? "active" : ''}><a href="" onClick={() => handleClick('all')}> All</a></li>
+                            <li><a href="" onClick={() => handleClick('completed')} className={(isActive[1].value) ? "active" : ''} >Completed</a></li>
+                            <li><a href="" onClick={() => handleClick('ongoing')} className={(isActive[2].value) ? "active" : ''}>Ongoing</a></li>
+                            <li><a href="" onClick={() => handleClick('upcoming')} className={(isActive[3].value) ? "active" : ''}>Upcoming</a></li>
                         </ul>
                     </div>
 
