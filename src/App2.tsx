@@ -40,14 +40,14 @@ function App2() {
 
     return (
         <HelmetProvider>
-            <Helmet>
+            {<Helmet>
                 <link rel="stylesheet" href="/css/elements.css" />
                 <link rel="stylesheet" href="/css/responsive.css" />
                 <link rel="stylesheet" href="/css/custom.css" />
                 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" />
                 <link rel="stylesheet" href="/style.css" />
                 <script src='/js/modernizr-2.8.3.min.js' ></script>
-            </Helmet>
+            </Helmet>}
 
             <BrowserRouter>
                 <Routes>
@@ -91,12 +91,12 @@ function App2() {
             </BrowserRouter>
 
 
-            <Helmet>
+            {<Helmet>
                 <script src='/js/plugins.js' type='module' ></script>
                 <script src='/js/main.js'  ></script>
                 <script src="/js/ajax-mail.js" type='module'></script>
             </Helmet >
-
+            }
         </HelmetProvider >
 
     )
