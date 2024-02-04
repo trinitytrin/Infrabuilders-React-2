@@ -1,11 +1,8 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 
-
-
 import Home from './pages/Home';
 import Contact from './pages/Contact';
-
 import About from './pages/About';
 import Services from './pages/Services';
 import Design from './pages/Design';
@@ -16,7 +13,6 @@ import ServicesLanding from './pages/ServicesLanding';
 import DesignLanding from './pages/DesignLanding';
 import ErrorPage from './pages/ErrorPage';
 import ProjectsLanding from './pages/ProjectsLanding';
-
 import ProjectDetails from './pages/ProjectDetails';
 import Layout from './routing/Layout';
 import EngineeringDesign from './pages/EngineeringDesign';
@@ -46,10 +42,10 @@ function App2() {
         <HelmetProvider>
             <Helmet>
                 <link rel="stylesheet" href="/css/elements.css" />
-                <link rel="stylesheet" href="/style.css" />
                 <link rel="stylesheet" href="/css/responsive.css" />
                 <link rel="stylesheet" href="/css/custom.css" />
-
+                <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" />
+                <link rel="stylesheet" href="/style.css" />
                 <script src='/js/modernizr-2.8.3.min.js' ></script>
             </Helmet>
 
