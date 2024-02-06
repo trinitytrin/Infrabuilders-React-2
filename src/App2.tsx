@@ -28,6 +28,8 @@ import Products from './pages/Products';
 import ProductsLanding from './pages/ProductsLanding';
 import ProductDetails from './pages/ProductDetails';
 
+import '../public/css/elements.css'
+
 import './App.css';
 
 
@@ -37,7 +39,7 @@ function App2() {
     return (
         <HelmetProvider>
             {<Helmet>
-                <link rel="stylesheet" href="/css/elements.css" />
+                {/* <link rel="stylesheet" href="/css/elements.css" /> */}
                 <link rel="stylesheet" href="/style.css" />
                 <link rel="stylesheet" href="/css/responsive.css" />
                 <link rel="stylesheet" href="/css/custom.css" />
