@@ -11,7 +11,7 @@ const SingleProjectBox = ({ project }: Props) => {
 
         <div className="portfolio-item col-md-4 col-sm-6">
             <div className="portfolio-item-content">
-                <div className="item-thumbnail-custom">
+                <div className="item-thumbnail">
                     <img src={project.image_url[0]} alt="" />
 
                 </div>
