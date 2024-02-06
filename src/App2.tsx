@@ -28,7 +28,10 @@ import Products from './pages/Products';
 import ProductsLanding from './pages/ProductsLanding';
 import ProductDetails from './pages/ProductDetails';
 
-import '../public/css/elements.css'
+import '../public/css/elements.css';
+import '../style.css';
+import '../public/css/responsive.css';
+import '../public/css/custom.css';
 
 import './App.css';
 
@@ -40,10 +43,10 @@ function App2() {
         <HelmetProvider>
             {<Helmet>
                 {/* <link rel="stylesheet" href="/css/elements.css" /> */}
-                <link rel="stylesheet" href="/style.css" />
-                <link rel="stylesheet" href="/css/responsive.css" />
+                {/* <link rel="stylesheet" href="/style.css" /> */}
+                {/* <link rel="stylesheet" href="/css/responsive.css" />
                 <link rel="stylesheet" href="/css/custom.css" />
-                <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" />
+                <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" /> */}
 
                 <script src='/js/modernizr-2.8.3.min.js' ></script>
             </Helmet>}
