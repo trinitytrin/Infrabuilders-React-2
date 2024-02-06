@@ -66,6 +66,18 @@ const DownloadBox = () => {
                                         </div>
                                     </div>
                                 </div>
+                                <div className="panel panel-default">
+                                    <div className="panel-heading" role="tab">
+                                        <h4 className="panel-title">
+                                            <a className="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Download Other Brochures</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseFour" className="panel-collapse collapse" role="tabpanel">
+                                        <div className="panel-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores voluptates beatae autem labore blanditiis omnis laborum nulla reiciendis in aspernatur, ab suscipit possimus iure magni natus cumque earum expedita facere. Ab velit consectetur dolorem maiores minima explicabo perferendis architecto suscipit.!</p>
+                                        </div>
+                                    </div>
+                                </div>
 
                             </div>
                         </div>
