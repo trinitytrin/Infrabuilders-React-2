@@ -67,7 +67,21 @@ const SingleProductDetails = () => {
                                 </aside>
                             </div>
                         </div>
+                        <div className="col-lg-3 col-md-4 col-sm-12">
+                            <div className="project-meta-wrapper meta-right-sidebar">
+                                <h4 className="widget-title">Products used in this Service</h4>
+                                {product.used_products !== undefined ? <>
+                                    <ul className="single-portfolio-meta">
+                                        {product.used_products?.map(used_product => (
+                                            <li><a href={used_product.url} target="_blank" rel="noopener noreferrer">{used_product.name} <i className="ti-arrow-top-right"></i></a></li>
+                                        ))}
 
+                                    </ul>
+
+                                </> : <div><p> No used products to show for this project</p></div>}
+
+                            </div>
+                        </div>
 
                     </div>
                     <ItemNavigation data={'products'} dataSize={data.length} itemId={Number(product?.id)} />

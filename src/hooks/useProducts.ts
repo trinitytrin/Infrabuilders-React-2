@@ -1,4 +1,5 @@
 import products from '../data/productsInfo';
+import { UsedProducts } from './useProjects';
 
 export interface Product {
     id: number;
@@ -11,6 +12,7 @@ export interface Product {
     image_urls: string[];
     video_link?:string;
     pdf_link?: string;
+    used_products?: UsedProducts[];
     description: string;
     highlight?: boolean;
 }
