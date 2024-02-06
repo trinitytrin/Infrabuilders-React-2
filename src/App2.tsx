@@ -37,7 +37,7 @@ function App2() {
     return (
         <HelmetProvider>
             {<Helmet>
-                {/* <link rel="stylesheet" href="/css/elements.css" /> */}
+                <link rel="stylesheet" href="/css/elements.css" />
                 <link rel="stylesheet" href="/style.css" />
                 <link rel="stylesheet" href="/css/responsive.css" />
                 <link rel="stylesheet" href="/css/custom.css" />
